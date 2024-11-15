@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Trends Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Google Trends Visualization</h1>
+        <p>Explore global search trends from 2001 to 2020.</p>
+    </header>
+    <main>
+        <!-- Visualization A: Bar Chart -->
+        <section id="bar-chart">
+            <h2>Top 5 Searches</h2>
+            <div id="chart"></div>
+            <label for="country">Country:</label>
+            <select id="country">
+                <option value="global">Global</option>
+                <option value="us">United States</option>
+                <!-- Add more countries -->
+            </select>
+            <button id="play-button">Play</button>
+        </section>
+        <!-- Add placeholders for other visualizations -->
+    </main>
+    <footer>
+        <p>Created by Cool Coders</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
