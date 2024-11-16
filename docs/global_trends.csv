@@ -1,0 +1,1136 @@
+year,category,query,location,rank
+2001,Consumer Brands,Nokia,Global,1
+2001,Consumer Brands,Sony,Global,2
+2001,Consumer Brands,BMW,Global,3
+2001,Consumer Brands,Palm,Global,4
+2001,Consumer Brands,Adobe,Global,5
+2001,MP3 Music Services,Morpheus,Global,1
+2001,MP3 Music Services,Napster,Global,2
+2001,MP3 Music Services,Gnutella,Global,3
+2001,MP3 Music Services,Kazaa,Global,4
+2001,MP3 Music Services,Audiogalaxy,Global,5
+2001,Men,Nostradamus,Global,1
+2001,Men,Osama bin Laden,Global,2
+2001,Men,Eminem,Global,3
+2001,Men,Michael Jackson,Global,4
+2001,Men,Howard Stern,Global,5
+2001,Movies,Harry Potter,Global,1
+2001,Movies,Lord of the Rings,Global,2
+2001,Movies,Final Fantasy,Global,3
+2001,Movies,Tomb Raider,Global,4
+2001,Movies,Shrek,Global,5
+2001,Music Groups,Beatles,Global,1
+2001,Music Groups,U2,Global,2
+2001,Music Groups,N Sync,Global,3
+2001,Music Groups,Backstreet Boys,Global,4
+2001,Music Groups,Linkin Park,Global,5
+2001,New Products,Windows XP,Global,1
+2001,New Products,Xbox,Global,2
+2001,New Products,PlayStation 2,Global,3
+2001,New Products,GameCube,Global,4
+2001,New Products,Nokia 5510,Global,5
+2001,News Resources,CNN,Global,1
+2001,News Resources,BBC,Global,2
+2001,News Resources,New York Times,Global,3
+2001,News Resources,MSNBC,Global,4
+2001,News Resources,Washington Post,Global,5
+2001,Retailers,Amazon,Global,1
+2001,Retailers,IKEA,Global,2
+2001,Retailers,"Toys ""R"" Us",Global,3
+2001,Retailers,Walmart,Global,4
+2001,Retailers,Circuit City,Global,5
+2001,Sports,Anna Kournikova,Global,1
+2001,Sports,Tour de France,Global,2
+2001,Sports,Dale Earnhardt,Global,3
+2001,Sports,Wimbledon,Global,4
+2001,Sports,US Open,Global,5
+2001,TV Shows,Loft Story,Global,1
+2001,TV Shows,Big Brother,Global,2
+2001,TV Shows,The Simpsons,Global,3
+2001,TV Shows,Survivor,Global,4
+2001,TV Shows,Gran Hermano,Global,5
+2001,Video Games,Counterstrike,Global,1
+2001,Video Games,The Sims,Global,2
+2001,Video Games,Operation Flashpoint,Global,3
+2001,Video Games,Moorhuhn 3,Global,4
+2001,Video Games,Wolfenstein,Global,5
+2001,Women,Britney Spears,Global,1
+2001,Women,Pamela Anderson,Global,2
+2001,Women,Jennifer Lopez,Global,3
+2001,Women,Madonna,Global,4
+2001,Women,Aaliyah,Global,5
+2002,Athletes,David Beckham,Global,1
+2002,Athletes,Anna Kournikova,Global,2
+2002,Athletes,Ronaldo,Global,3
+2002,Athletes,Kobe Bryant,Global,4
+2002,Athletes,Zinedine Zidane,Global,5
+2002,Consumer Brands,Ferrari,Global,1
+2002,Consumer Brands,Sony,Global,2
+2002,Consumer Brands,Nokia,Global,3
+2002,Consumer Brands,Disney,Global,4
+2002,Consumer Brands,IKEA,Global,5
+2002,Kids' Images,The Simpsons,Global,1
+2002,Kids' Images,Pokémon,Global,2
+2002,Kids' Images,Snoopy,Global,3
+2002,Kids' Images,Superman,Global,4
+2002,Kids' Images,Batman,Global,5
+2002,Men,Eminem,Global,1
+2002,Men,Brad Pitt,Global,2
+2002,Men,David Beckham,Global,3
+2002,Men,Josh Hartnett,Global,4
+2002,Men,2Pac,Global,5
+2002,Movies,Spiderman,Global,1
+2002,Movies,Harry Potter,Global,2
+2002,Movies,Star Wars,Global,3
+2002,Movies,Jackass,Global,4
+2002,Movies,Scooby Doo,Global,5
+2002,Musicians and Bands,Eminem,Global,1
+2002,Musicians and Bands,Shakira,Global,2
+2002,Musicians and Bands,Madonna,Global,3
+2002,Musicians and Bands,Nelly,Global,4
+2002,Musicians and Bands,2Pac,Global,5
+2002,News Stories,World Cup,Global,1
+2002,News Stories,Iraq,Global,2
+2002,News Stories,Sniper,Global,3
+2002,News Stories,Hurricane Lili,Global,4
+2002,News Stories,Hochwasser,Global,5
+2002,Retailers,IKEA,Global,1
+2002,Retailers,Home Depot,Global,2
+2002,Retailers,Walmart,Global,3
+2002,Retailers,Best Buy,Global,4
+2002,Retailers,Sears,Global,5
+2002,TV Shows,The Simpsons,Global,1
+2002,TV Shows,Big Brother,Global,2
+2002,TV Shows,The Osbournes,Global,3
+2002,TV Shows,South Park,Global,4
+2002,TV Shows,SpongeBob SquarePants,Global,5
+2002,Technology,MP3,Global,1
+2002,Technology,SMS,Global,2
+2002,Technology,WinZip,Global,3
+2002,Technology,Linux,Global,4
+2002,Technology,FTP,Global,5
+2002,Travel Destinations,Paris,Global,1
+2002,Travel Destinations,Canada,Global,2
+2002,Travel Destinations,New York,Global,3
+2002,Travel Destinations,India,Global,4
+2002,Travel Destinations,Las Vegas,Global,5
+2002,Video Games,The Sims,Global,1
+2002,Video Games,Counter Strike,Global,2
+2002,Video Games,GTA 3,Global,3
+2002,Video Games,Warcraft 3,Global,4
+2002,Video Games,Jedi Knight 2,Global,5
+2002,Women,Britney Spears,Global,1
+2002,Women,Pamela Anderson,Global,2
+2002,Women,Jennifer Lopez,Global,3
+2002,Women,Shakira,Global,4
+2002,Women,Anna Kournikova,Global,5
+2003,Anime Images,Manga,Global,1
+2003,Anime Images,Final Fantasy,Global,2
+2003,Anime Images,Sailor Moon,Global,3
+2003,Anime Images,Yu-Gi-Oh!,Global,4
+2003,Anime Images,Dragon Ball Z,Global,5
+2003,Consumer Brands,Ferrari,Global,1
+2003,Consumer Brands,Sony,Global,2
+2003,Consumer Brands,BMW,Global,3
+2003,Consumer Brands,Disney,Global,4
+2003,Consumer Brands,Ryanair,Global,5
+2003,Earthquake Searches,Earthquake,Global,1
+2003,Earthquake Searches,California Earthquake,Global,2
+2003,Earthquake Searches,Earthquakes,Global,3
+2003,Earthquake Searches,Earthquake California,Global,4
+2003,Earthquake Searches,California Earthquakes,Global,5
+2003,Fictional Character Images,The Simpsons,Global,1
+2003,Fictional Character Images,Harry Potter,Global,2
+2003,Fictional Character Images,Pokémon,Global,3
+2003,Fictional Character Images,Spiderman,Global,4
+2003,Fictional Character Images,Winnie the Pooh,Global,5
+2003,Male Celebrity Images,Eminem,Global,1
+2003,Male Celebrity Images,David Beckham,Global,2
+2003,Male Celebrity Images,Orlando Bloom,Global,3
+2003,Male Celebrity Images,Justin Timberlake,Global,4
+2003,Male Celebrity Images,50 Cent,Global,5
+2003,News Searches,Iraq,Global,1
+2003,News Searches,Laci Peterson,Global,2
+2003,News Searches,Kobe Bryant,Global,3
+2003,News Searches,Bertrand Cantat,Global,4
+2003,News Searches,RIAA,Global,5
+2003,Searches,Britney Spears,Global,1
+2003,Searches,Harry Potter,Global,2
+2003,Searches,Matrix,Global,3
+2003,Searches,Shakira,Global,4
+2003,Searches,David Beckham,Global,5
+2004,Car Images,Ferrari,Global,1
+2004,Car Images,BMW,Global,2
+2004,Car Images,Lamborghini,Global,3
+2004,Car Images,Nissan Skyline,Global,4
+2004,Car Images,Porsche,Global,5
+2004,Cartoons Images,The Simpsons,Global,1
+2004,Cartoons Images,Pokémon,Global,2
+2004,Cartoons Images,South Park,Global,3
+2004,Cartoons Images,Garfield,Global,4
+2004,Cartoons Images,Hello Kitty,Global,5
+2004,Companies,SCO,Global,1
+2004,Companies,Johnson & Johnson,Global,2
+2004,Companies,ING,Global,3
+2004,Companies,GE Aviation,Global,4
+2004,Companies,Fleet,Global,5
+2004,Consumer Brands,eBay,Global,1
+2004,Consumer Brands,Walmart,Global,2
+2004,Consumer Brands,MapQuest,Global,3
+2004,Consumer Brands,Amazon,Global,4
+2004,Consumer Brands,Home Depot,Global,5
+2004,Countries,France,Global,1
+2004,Countries,China,Global,2
+2004,Countries,India,Global,3
+2004,Countries,Iraq,Global,4
+2004,Countries,Iran,Global,5
+2004,Deaths of 2004,Nicholas Berg,Global,1
+2004,Deaths of 2004,Christopher Reeve,Global,2
+2004,Deaths of 2004,Spalding Gray,Global,3
+2004,Deaths of 2004,Marlon Brando,Global,4
+2004,Deaths of 2004,Kenneth Bigley,Global,5
+2004,Entertainment,Spa,Global,1
+2004,Entertainment,Movies,Global,2
+2004,Entertainment,Nightclub,Global,3
+2004,Entertainment,Pub,Global,4
+2004,Entertainment,Zoo,Global,5
+2004,Female Celebrity Images,Britney Spears,Global,1
+2004,Female Celebrity Images,Christina Aguilera,Global,2
+2004,Female Celebrity Images,Pamela Anderson,Global,3
+2004,Female Celebrity Images,Paris Hilton,Global,4
+2004,Female Celebrity Images,Carmen Electra,Global,5
+2004,Foods,Pizza,Global,1
+2004,Foods,Sushi,Global,2
+2004,Foods,Bakery,Global,3
+2004,Foods,Chinese,Global,4
+2004,Foods,Italian,Global,5
+2004,Froogle Brand Searches,Louis Vuitton,Global,1
+2004,Froogle Brand Searches,Nikon,Global,2
+2004,Froogle Brand Searches,Canon,Global,3
+2004,Froogle Brand Searches,Treo,Global,4
+2004,Froogle Brand Searches,Tiffany,Global,5
+2004,Froogle Clothing Searches,Bikini,Global,1
+2004,Froogle Clothing Searches,Mini Skirt,Global,2
+2004,Froogle Clothing Searches,Prom Dresses,Global,3
+2004,Froogle Clothing Searches,Lingerie,Global,4
+2004,Froogle Clothing Searches,Little Black Dress,Global,5
+2004,Froogle Computer Goods Searches,Tablet PC,Global,1
+2004,Froogle Computer Goods Searches,Computer,Global,2
+2004,Froogle Computer Goods Searches,Laptop,Global,3
+2004,Froogle Computer Goods Searches,Headphones,Global,4
+2004,Froogle Computer Goods Searches,Computer Speakers,Global,5
+2004,Froogle Electronics Searches,iPod,Global,1
+2004,Froogle Electronics Searches,Digital Camera,Global,2
+2004,Froogle Electronics Searches,MP3,Global,3
+2004,Froogle Electronics Searches,Xbox,Global,4
+2004,Froogle Electronics Searches,PlayStation 2,Global,5
+2004,Froogle Hobby Searches,Poker Chips,Global,1
+2004,Froogle Hobby Searches,Airsoft Guns,Global,2
+2004,Froogle Hobby Searches,Mountain Bike,Global,3
+2004,Froogle Hobby Searches,Pocket Bike,Global,4
+2004,Froogle Hobby Searches,Night Vision Goggles,Global,5
+2004,Froogle Shoe Searches,UGG Boots,Global,1
+2004,Froogle Shoe Searches,Puma,Global,2
+2004,Froogle Shoe Searches,Adidas,Global,3
+2004,Froogle Shoe Searches,Nike,Global,4
+2004,Froogle Shoe Searches,Aerosole,Global,5
+2004,Health Services,Doctor,Global,1
+2004,Health Services,Hospital,Global,2
+2004,Health Services,Massage,Global,3
+2004,Health Services,Dentist,Global,4
+2004,Health Services,Yoga,Global,5
+2004,Hotel Chains,Holiday Inn,Global,1
+2004,Hotel Chains,Hampton Inn,Global,2
+2004,Hotel Chains,Marriott,Global,3
+2004,Hotel Chains,Hilton,Global,4
+2004,Hotel Chains,Days Inn,Global,5
+2004,Male Celebrity Images,Orlando Bloom,Global,1
+2004,Male Celebrity Images,Eminem,Global,2
+2004,Male Celebrity Images,Usher,Global,3
+2004,Male Celebrity Images,Johnny Depp,Global,4
+2004,Male Celebrity Images,Brad Pitt,Global,5
+2004,Men,Orlando Bloom,Global,1
+2004,Men,Eminem,Global,2
+2004,Men,Usher,Global,3
+2004,Men,Johnny Depp,Global,4
+2004,Men,Brad Pitt,Global,5
+2004,News Outlets,CNN,Global,1
+2004,News Outlets,Washington Post,Global,2
+2004,News Outlets,BBC,Global,3
+2004,News Outlets,Fox News,Global,4
+2004,News Outlets,New York Times,Global,5
+2004,Professional Services,Real Estate,Global,1
+2004,Professional Services,Attorney,Global,2
+2004,Professional Services,Insurance Broker,Global,3
+2004,Professional Services,Car Dealer,Global,4
+2004,Professional Services,Hair Salon,Global,5
+2004,Public Figures,George W. Bush,Global,1
+2004,Public Figures,Janet Jackson,Global,2
+2004,Public Figures,John Kerry,Global,3
+2004,Public Figures,Britney Spears,Global,4
+2004,Public Figures,Saddam Hussein,Global,5
+2004,Retail Chains,Walmart,Global,1
+2004,Retail Chains,Home Depot,Global,2
+2004,Retail Chains,Best Buy,Global,3
+2004,Retail Chains,Costco,Global,4
+2004,Retail Chains,Walgreens,Global,5
+2004,Searches,Britney Spears,Global,1
+2004,Searches,Paris Hilton,Global,2
+2004,Searches,Christina Aguilera,Global,3
+2004,Searches,Pamela Anderson,Global,4
+2004,Searches,Chat,Global,5
+2004,Sports,David Beckham,Global,1
+2004,Sports,Tour de France,Global,2
+2004,Sports,Euro 2004,Global,3
+2004,Sports,NBA,Global,4
+2004,Sports,Lance Armstrong,Global,5
+2004,Sports Services,YMCA,Global,1
+2004,Sports Services,Golf,Global,2
+2004,Sports Services,Campground,Global,3
+2004,Sports Services,Bowling,Global,4
+2004,Sports Services,Marathon,Global,5
+2004,TV Shows,The Simpsons,Global,1
+2004,TV Shows,Pokémon,Global,2
+2004,TV Shows,South Park,Global,3
+2004,TV Shows,Charmed,Global,4
+2004,TV Shows,SpongeBob SquarePants,Global,5
+2004,Technology,Wallpaper,Global,1
+2004,Technology,Kazaa,Global,2
+2004,Technology,MP3,Global,3
+2004,Technology,Spybot,Global,4
+2004,Technology,Linux,Global,5
+2004,Women,Britney Spears,Global,1
+2004,Women,Paris Hilton,Global,2
+2004,Women,Christina Aguilera,Global,3
+2004,Women,Pamela Anderson,Global,4
+2004,Women,Carmen Electra,Global,5
+2005,Froogle Searches,iPod,Global,1
+2005,Froogle Searches,Digital Camera,Global,2
+2005,Froogle Searches,MP3 Player,Global,3
+2005,Froogle Searches,iPod Mini,Global,4
+2005,Froogle Searches,PlayStation Portable,Global,5
+2005,Most Searched,Janet Jackson,Global,1
+2005,Most Searched,Hurricane Katrina,Global,2
+2005,Most Searched,Tsunami,Global,3
+2005,Most Searched,Xbox 360,Global,4
+2005,Most Searched,Brad Pitt,Global,5
+2006,Deaths of 2006,Aaron Spelling,Global,1
+2006,Deaths of 2006,Kirby Puckett,Global,2
+2006,Deaths of 2006,Jack Wild,Global,3
+2006,Deaths of 2006,Clifford Geertz,Global,4
+2006,Deaths of 2006,Muriel Spark,Global,5
+2006,Define...,Define Promiscuous,Global,1
+2006,Define...,Define Web 2.0,Global,2
+2006,Define...,Define FTW,Global,3
+2006,Define...,Define Calidad,Global,4
+2006,Define...,Define Ajax,Global,5
+2006,Divorces,Paul McCartney and Heather Mills,Global,1
+2006,Divorces,Travis Barker and Shanna Moakler,Global,2
+2006,Divorces,Britney Spears and Kevin Federline,Global,3
+2006,Divorces,Whitney Houston and Bobby Brown,Global,4
+2006,Divorces,Eminem and Kim Mathers,Global,5
+2006,How to...,How to Refinance,Global,1
+2006,How to...,Wiki How To,Global,2
+2006,How to...,How to Drift,Global,3
+2006,How to...,How to Podcast,Global,4
+2006,How to...,How to Scream,Global,5
+2006,Jerseys,World Cup Jerseys,Global,1
+2006,Jerseys,Zidane Jersey,Global,2
+2006,Jerseys,Buffalo Sabres Jersey,Global,3
+2006,Jerseys,Ronaldinho Jersey,Global,4
+2006,Jerseys,Italy Jersey,Global,5
+2006,Most Searched,Bebo,Global,1
+2006,Most Searched,Myspace,Global,2
+2006,Most Searched,World Cup,Global,3
+2006,Most Searched,Metacafe,Global,4
+2006,Most Searched,Radioblog,Global,5
+2006,News Searches,Paris Hilton,Global,1
+2006,News Searches,Orlando Bloom,Global,2
+2006,News Searches,Cancer,Global,3
+2006,News Searches,Podcasting,Global,4
+2006,News Searches,Hurricane Katrina,Global,5
+2006,Retirements,Bob Barker,Global,1
+2006,Retirements,Bobby Bowden,Global,2
+2006,Retirements,Sammy Sosa,Global,3
+2006,Retirements,Tiki Barber,Global,4
+2006,Retirements,Bill Gates,Global,5
+2006,Weddings,Nicole Kidman and Keith Urban,Global,1
+2006,Weddings,Tom Cruise and Katie Holmes,Global,2
+2006,Weddings,Avril Lavigne and Deryck Whibley,Global,3
+2006,Weddings,Campbell Brown and Dan Senor,Global,4
+2006,Weddings,TomKat Wedding Photos,Global,5
+2006,What is...,What is Hezbollah,Global,1
+2006,What is...,What is Carisoprodol,Global,2
+2006,What is...,What is Acyclovir,Global,3
+2006,What is...,What is Alprazolam,Global,4
+2006,What is...,What is Tramadol,Global,5
+2006,Where is...,Where is Togo,Global,1
+2006,Where is...,Where is Matt,Global,2
+2006,Where is...,Where is Torino,Global,3
+2006,Where is...,Where is Darfur,Global,4
+2006,Where is...,Where is Villanova,Global,5
+2006,Who is...,Who is Borat,Global,1
+2006,Who is...,Who is Hezbollah,Global,2
+2006,Who is...,Who is EU,Global,3
+2006,Who is...,Who is Hot,Global,4
+2006,Who is...,Who is Capote,Global,5
+2007,News Searches,American Idol,Global,1
+2007,News Searches,YouTube,Global,2
+2007,News Searches,Britney Spears,Global,3
+2007,News Searches,2007 Cricket World Cup,Global,4
+2007,News Searches,Chris Benoit,Global,5
+2008,Campaign Buzzwords,Joe The Plumber,Global,1
+2008,Campaign Buzzwords,Jeremiah Wright,Global,2
+2008,Campaign Buzzwords,Maverick,Global,3
+2008,Campaign Buzzwords,William Ayers,Global,4
+2008,Campaign Buzzwords,Bridge To Nowhere,Global,5
+2008,Cocktails,Martini,Global,1
+2008,Cocktails,Mojito,Global,2
+2008,Cocktails,Margarita,Global,3
+2008,Cocktails,Manhattan,Global,4
+2008,Cocktails,Cosmopolitan,Global,5
+2008,Comfort Foods,Ice Cream,Global,1
+2008,Comfort Foods,Chili,Global,2
+2008,Comfort Foods,Spaghetti,Global,3
+2008,Comfort Foods,Meatloaf,Global,4
+2008,Comfort Foods,Fried Chicken,Global,5
+2008,Concerts,Jonas Brothers,Global,1
+2008,Concerts,Coldplay,Global,2
+2008,Concerts,Hannah Montana,Global,3
+2008,Concerts,Kenny Chesney,Global,4
+2008,Concerts,Carrie Underwood,Global,5
+2008,DIY,DIY Wedding,Global,1
+2008,DIY,DIY TV,Global,2
+2008,DIY,DIY Solar,Global,3
+2008,DIY,DIY Tile,Global,4
+2008,DIY,DIY Audio,Global,5
+2008,Deaths of 2008,Heath Ledger,Global,1
+2008,Deaths of 2008,Bernie Mac,Global,2
+2008,Deaths of 2008,Tim Russert,Global,3
+2008,Deaths of 2008,Isaac Hayes,Global,4
+2008,Deaths of 2008,George Carlin,Global,5
+2008,How To...,How To Draw,Global,1
+2008,How To...,How To Kiss,Global,2
+2008,How To...,How To Write,Global,3
+2008,How To...,How To Cook,Global,4
+2008,How To...,How To Tie,Global,5
+2008,It's All Over Now,Hugh Hefner & Holly Madison,Global,1
+2008,It's All Over Now,Danity Kane,Global,2
+2008,It's All Over Now,Jennifer Aniston & John Mayer,Global,3
+2008,It's All Over Now,Taylor Swift & Joe Jonas,Global,4
+2008,It's All Over Now,Jessica Simpson & Tony Romo,Global,5
+2008,Lyrics,With You,Global,1
+2008,Lyrics,My Life,Global,2
+2008,Lyrics,Love Song,Global,3
+2008,Lyrics,Lollipop,Global,4
+2008,Lyrics,Low,Global,5
+2008,MLB,Boston Red Sox,Global,1
+2008,MLB,New York Yankees,Global,2
+2008,MLB,Chicago Cubs,Global,3
+2008,MLB,Philadelphia Phillies,Global,4
+2008,MLB,New York Mets,Global,5
+2008,Mascots,Olympic Mascot,Global,1
+2008,Mascots,Georgia Mascot,Global,2
+2008,Mascots,Tennessee Mascot,Global,3
+2008,Mascots,Ohio State Mascot,Global,4
+2008,Mascots,Phillies Mascot,Global,5
+2008,Movie Trailers,Dark Knight,Global,1
+2008,Movie Trailers,Iron Man,Global,2
+2008,Movie Trailers,Hulk,Global,3
+2008,Movie Trailers,Star Wars,Global,4
+2008,Movie Trailers,Indiana Jones,Global,5
+2008,NBA Teams,Los Angeles Lakers,Global,1
+2008,NBA Teams,Boston Celtics,Global,2
+2008,NBA Teams,Phoenix Suns,Global,3
+2008,NBA Teams,New York Knicks,Global,4
+2008,NBA Teams,Detroit Pistons,Global,5
+2008,NFL Teams,New York Giants,Global,1
+2008,NFL Teams,Dallas Cowboys,Global,2
+2008,NFL Teams,New England Patriots,Global,3
+2008,NFL Teams,Pittsburgh Steelers,Global,4
+2008,NFL Teams,Green Bay Packers,Global,5
+2008,NHL Teams,Detroit Red Wings,Global,1
+2008,NHL Teams,Pittsburgh Penguins,Global,2
+2008,NHL Teams,Buffalo Sabres,Global,3
+2008,NHL Teams,Philadelphia Flyers,Global,4
+2008,NHL Teams,Boston Bruins,Global,5
+2008,Olympic Sports,Gymnastics,Global,1
+2008,Olympic Sports,Swimming,Global,2
+2008,Olympic Sports,Soccer,Global,3
+2008,Olympic Sports,Tennis,Global,4
+2008,Olympic Sports,Basketball,Global,5
+2008,Political News Sources,Fox,Global,1
+2008,Political News Sources,CNN,Global,2
+2008,Political News Sources,ABC,Global,3
+2008,Political News Sources,CBS,Global,4
+2008,Political News Sources,MSNBC,Global,5
+2008,Reality Shows,American Idol,Global,1
+2008,Reality Shows,Big Brother,Global,2
+2008,Reality Shows,Dancing with the Stars,Global,3
+2008,Reality Shows,So You Think You Can Dance,Global,4
+2008,Reality Shows,The Hills,Global,5
+2008,Rivalries,Red River Rivalry,Global,1
+2008,Rivalries,Michigan Ohio State Rivalry,Global,2
+2008,Rivalries,Red Sox Yankees Rivalry,Global,3
+2008,Rivalries,Lakers Celtics Rivalry,Global,4
+2008,Rivalries,Georgia Auburn Rivalry,Global,5
+2008,Soccer Teams,Manchester United F.C.,Global,1
+2008,Soccer Teams,Chelsea F.C.,Global,2
+2008,Soccer Teams,Chivas,Global,3
+2008,Soccer Teams,FC Barcelona,Global,4
+2008,Soccer Teams,Arsenal F.C.,Global,5
+2008,Social Networks,Facebook,Global,1
+2008,Social Networks,Myspace,Global,2
+2008,Social Networks,Hi5,Global,3
+2008,Social Networks,Orkut,Global,4
+2008,Social Networks,LinkedIn,Global,5
+2008,TV Shows,American Idol,Global,1
+2008,TV Shows,Lost,Global,2
+2008,TV Shows,SNL,Global,3
+2008,TV Shows,The Office,Global,4
+2008,TV Shows,Family Guy,Global,5
+2008,What Is...,What is Love,Global,1
+2008,What Is...,What is Life,Global,2
+2008,What Is...,What is Java,Global,3
+2008,What Is...,What is SAP,Global,4
+2008,What Is...,What is RSS,Global,5
+2008,Who is...,Who is Obama,Global,1
+2008,Who is...,Who is McCain,Global,2
+2008,Who is...,Who is Palin,Global,3
+2008,Who is...,Who is Lil Wayne,Global,4
+2008,Who is...,Who is Miley Cyrus,Global,5
+2009,Entertainment,Michael Jackson,Global,1
+2009,Entertainment,Transformers,Global,2
+2009,Entertainment,Eminem,Global,3
+2009,Entertainment,Naruto Shippuden,Global,4
+2009,Entertainment,Beyoncé,Global,5
+2009,Events: Fastest Rising Searches,VMAs,Global,1
+2009,Events: Fastest Rising Searches,International Society Of Transport Aircraft Trading,Global,2
+2009,Events: Fastest Rising Searches,Delhi Sustainable Development Summit,Global,3
+2009,Events: Fastest Rising Searches,BBC Proms,Global,4
+2009,Events: Fastest Rising Searches,EuroChocolate,Global,5
+2009,Fastest Falling,Beijing 2008,Global,1
+2009,Fastest Falling,Euro 2008,Global,2
+2009,Fastest Falling,Heath Ledger,Global,3
+2009,Fastest Falling,Barack Obama,Global,4
+2009,Fastest Falling,Amy Winehouse,Global,5
+2009,Fastest Rising,Michael Jackson,Global,1
+2009,Fastest Rising,Facebook,Global,2
+2009,Fastest Rising,Tuenti,Global,3
+2009,Fastest Rising,Twitter,Global,4
+2009,Fastest Rising,Sanalika,Global,5
+2009,Fastest Rising Searches: First Half of 2009,Eurovision 2009,Global,1
+2009,Fastest Rising Searches: First Half of 2009,Susan Boyle,Global,2
+2009,Fastest Rising Searches: First Half of 2009,Jade Goody,Global,3
+2009,Fastest Rising Searches: First Half of 2009,Lady Gaga,Global,4
+2009,Fastest Rising Searches: First Half of 2009,Robert Pattinson,Global,5
+2009,Fastest Rising Searches: Second Half of 2009,Win For Life,Global,1
+2009,Fastest Rising Searches: Second Half of 2009,FIFA 10,Global,2
+2009,Fastest Rising Searches: Second Half of 2009,Secret Story 3,Global,3
+2009,Fastest Rising Searches: Second Half of 2009,Facebook,Global,4
+2009,Fastest Rising Searches: Second Half of 2009,Schweinegrippe,Global,5
+2009,Festivals: Fastest Rising Searches,Sonnenrot Festival,Global,1
+2009,Festivals: Fastest Rising Searches,Festival Sudoeste,Global,2
+2009,Festivals: Fastest Rising Searches,Festival Di Venezia,Global,3
+2009,Festivals: Fastest Rising Searches,Coca Cola Zero Fest,Global,4
+2009,Festivals: Fastest Rising Searches,Lesbian Film Festival,Global,5
+2009,Food and Drink,Acai Berry,Global,1
+2009,Food and Drink,Picnic,Global,2
+2009,Food and Drink,COOKPAD,Global,3
+2009,Food and Drink,Tesco Direct,Global,4
+2009,Food and Drink,Senseo,Global,5
+2009,Looking to Buy Online: Fastest Rising Searches,Windows 7,Global,1
+2009,Looking to Buy Online: Fastest Rising Searches,Tamiflu,Global,2
+2009,Looking to Buy Online: Fastest Rising Searches,Alli,Global,3
+2009,Looking to Buy Online: Fastest Rising Searches,Nokia N97,Global,4
+2009,Looking to Buy Online: Fastest Rising Searches,LightScribe,Global,5
+2009,Mobile Application Searches: Fastest Rising,YouTube App,Global,1
+2009,Mobile Application Searches: Fastest Rising,Facebook App,Global,2
+2009,Mobile Application Searches: Fastest Rising,IPlayer App,Global,3
+2009,Mobile Application Searches: Fastest Rising,Google Maps App,Global,4
+2009,Mobile Application Searches: Fastest Rising,Twitter App,Global,5
+2009,News Searches: Fastest Rising,Ted Kennedy,Global,1
+2009,News Searches: Fastest Rising,Twitter Tips,Global,2
+2009,News Searches: Fastest Rising,Jade Goody,Global,3
+2009,News Searches: Fastest Rising,Gad Elmaleh,Global,4
+2009,News Searches: Fastest Rising,Chris Brown,Global,5
+2009,People: Fastest Rising,Jade Goody,Global,1
+2009,People: Fastest Rising,Lady Gaga,Global,2
+2009,People: Fastest Rising,Michael Jackson,Global,3
+2009,People: Fastest Rising,Robert Pattinson,Global,4
+2009,People: Fastest Rising,Megan Fox,Global,5
+2009,Searches Related to Economy: Fastest Rising,Irish Economy 2009,Global,1
+2009,Searches Related to Economy: Fastest Rising,Indian Economy 2009,Global,2
+2009,Searches Related to Economy: Fastest Rising,Nobel Prize Economia 2009,Global,3
+2009,Searches Related to Economy: Fastest Rising,UK Economy 2009,Global,4
+2009,Searches Related to Economy: Fastest Rising,Energy Economy,Global,5
+2009,Sports,Real Madrid,Global,1
+2009,Sports,US Open,Global,2
+2009,Sports,UFC,Global,3
+2009,Sports,Sahadan,Global,4
+2009,Sports,LiveScore,Global,5
+2010,Consumer Electronics,iPad,Global,1
+2010,Consumer Electronics,iPhone 4,Global,2
+2010,Consumer Electronics,Nokia 5530,Global,3
+2010,Consumer Electronics,HTC EVO 4g,Global,4
+2010,Consumer Electronics,Nokia N900,Global,5
+2010,Entertainment,Justin Bieber,Global,1
+2010,Entertainment,Shakira,Global,2
+2010,Entertainment,Eminem,Global,3
+2010,Entertainment,Netflix,Global,4
+2010,Entertainment,YouTube,Global,5
+2010,Falling Searches,Swine Flu,Global,1
+2010,Falling Searches,WaMu,Global,2
+2010,Falling Searches,New Moon,Global,3
+2010,Falling Searches,Mininova,Global,4
+2010,Falling Searches,Susan Boyle,Global,5
+2010,Food & Drink,MasterChef,Global,1
+2010,Food & Drink,食べログ,Global,2
+2010,Food & Drink,Cupcakes,Global,3
+2010,Food & Drink,Jimmy Johns,Global,4
+2010,Food & Drink,Kак жрать суши,Global,5
+2010,Health,HCG diet,Global,1
+2010,Health,Dr. Oz,Global,2
+2010,Health,Aspergers,Global,3
+2010,Health,McDonald's nutrition,Global,4
+2010,Health,Vitamin D Deficiency,Global,5
+2010,Humanitarian Aid,Donate to Haiti,Global,1
+2010,Humanitarian Aid,Donate to Pakistan,Global,2
+2010,Humanitarian Aid,Text to donate,Global,3
+2010,Humanitarian Aid,Doctors Without Borders,Global,4
+2010,Humanitarian Aid,Download to Donate,Global,5
+2010,Maps Searches,Anhembi Parque,Global,1
+2010,Maps Searches,WM Gucken,Global,2
+2010,Maps Searches,World Cup,Global,3
+2010,Maps Searches,Bundeskanzleramt,Global,4
+2010,Maps Searches,Rio Branco,Global,5
+2010,People,Justin Bieber,Global,1
+2010,People,Katy Perry,Global,2
+2010,People,Selena Gomez,Global,3
+2010,People,Kim Kardashian,Global,4
+2010,People,Eminem,Global,5
+2010,Sports,Mundial 2010,Global,1
+2010,Sports,Olympics,Global,2
+2010,Sports,ESPN3,Global,3
+2010,Sports,FIFA 11,Global,4
+2010,Sports,Randy Moss,Global,5
+2010,Top Trending,Chatroulette,Global,1
+2010,Top Trending,iPad,Global,2
+2010,Top Trending,Justin Bieber,Global,3
+2010,Top Trending,Nicki Minaj,Global,4
+2010,Top Trending,Friv,Global,5
+2011,Consumer Electronics,Amazon Kindle Fire,Global,1
+2011,Consumer Electronics,iPhone 4s,Global,2
+2011,Consumer Electronics,Sidekick 4g,Global,3
+2011,Consumer Electronics,Hp Touchpad,Global,4
+2011,Consumer Electronics,Spb Shell 3d,Global,5
+2011,Entertainment,Rebecca Black,Global,1
+2011,Entertainment,Ryan Dunn Dead,Global,2
+2011,Entertainment,Price Tag Lyrics,Global,3
+2011,Entertainment,Amy Winehouse Death,Global,4
+2011,Entertainment,Super Bass Lyrics,Global,5
+2011,Falling Searches,Myspace,Global,1
+2011,Falling Searches,Hi5,Global,2
+2011,Falling Searches,Mebo,Global,3
+2011,Falling Searches,Nasza Klasa,Global,4
+2011,Falling Searches,Netlog,Global,5
+2011,Fastest Rising,Rebecca Black,Global,1
+2011,Fastest Rising,Google Plus,Global,2
+2011,Fastest Rising,Ryan Dunn,Global,3
+2011,Fastest Rising,Casey Anthony,Global,4
+2011,Fastest Rising,Battlefield 3,Global,5
+2011,Food & Drink,Wendy's,Global,1
+2011,Food & Drink,Just Eat,Global,2
+2011,Food & Drink,Little Caesars,Global,3
+2011,Food & Drink,Chick-Fil-A,Global,4
+2011,Food & Drink,Allrecipes,Global,5
+2011,Google Maps,UTM,Global,1
+2011,Google Maps,Siegessaule Berlin,Global,2
+2011,Google Maps,Dpt Conforama,Global,3
+2011,Google Maps,Wells Fargo,Global,4
+2011,Google Maps,Friseur,Global,5
+2011,Google News,Fukushima,Global,1
+2011,Google News,iPhone 4s,Global,2
+2011,Google News,Melania Rea,Global,3
+2011,Google News,Salvatore Parolisi,Global,4
+2011,Google News,Lamberto Sposini,Global,5
+2011,People,Big Meech,Global,1
+2011,People,Steve Jobs,Global,2
+2011,People,John Dahlback,Global,3
+2011,People,Nicki Minaj,Global,4
+2011,People,Rihanna,Global,5
+2011,Sports,Mayweather vs. Ortiz,Global,1
+2011,Sports,SoccerStar,Global,2
+2011,Sports,Dan Wheldon,Global,3
+2011,Sports,UFC Rio,Global,4
+2011,Sports,Marco Simoncelli,Global,5
+2012,Airlines,Southwest Airlines,Global,1
+2012,Airlines,United Airlines,Global,2
+2012,Airlines,American Airlines,Global,3
+2012,Airlines,Delta Airlines,Global,4
+2012,Airlines,Air France,Global,5
+2012,Athletes,Jeremy Lin,Global,1
+2012,Athletes,Michael Phelps,Global,2
+2012,Athletes,Peyton Manning,Global,3
+2012,Athletes,McKayla Maroney,Global,4
+2012,Athletes,Junior Seau,Global,5
+2012,Consumer Electronics,iPad 3,Global,1
+2012,Consumer Electronics,Samsung Galaxy S3,Global,2
+2012,Consumer Electronics,iPad Mini,Global,3
+2012,Consumer Electronics,Nexus 7,Global,4
+2012,Consumer Electronics,Galaxy Note 2,Global,5
+2012,Events,Hurricane Sandy,Global,1
+2012,Events,Kate Middleton Pictures Released,Global,2
+2012,Events,Olympics 2012,Global,3
+2012,Events,SOPA Debate,Global,4
+2012,Events,Costa Concordia crash,Global,5
+2012,Feature Films,The Hunger Games,Global,1
+2012,Feature Films,Skyfall,Global,2
+2012,Feature Films,Prometheus,Global,3
+2012,Feature Films,The Avengers,Global,4
+2012,Feature Films,Magic Mike,Global,5
+2012,Google+ Hashtags,#SOPA,Global,1
+2012,Google+ Hashtags,#Awesome,Global,2
+2012,Google+ Hashtags,#Sandy,Global,3
+2012,Google+ Hashtags,#IO12,Global,4
+2012,Google+ Hashtags,#Curiosity,Global,5
+2012,Images,One Direction,Global,1
+2012,Images,Selena Gomez,Global,2
+2012,Images,iPhone 5,Global,3
+2012,Images,Megan Fox,Global,4
+2012,Images,Rihanna,Global,5
+2012,People,Whitney Houston,Global,1
+2012,People,Kate Middleton,Global,2
+2012,People,Amanda Todd,Global,3
+2012,People,Michael Clarke Duncan,Global,4
+2012,People,One Direction,Global,5
+2012,Performing Artists,Whitney Houston,Global,1
+2012,Performing Artists,Michael Clarke Duncan,Global,2
+2012,Performing Artists,One Direction,Global,3
+2012,Performing Artists,Donna Summer,Global,4
+2012,Performing Artists,Lana Del Rey,Global,5
+2012,Searches,Whitney Houston,Global,1
+2012,Searches,Gangnam Style,Global,2
+2012,Searches,Hurricane Sandy,Global,3
+2012,Searches,iPad 3,Global,4
+2012,Searches,Diablo 3,Global,5
+2012,TV Shows,BBB12,Global,1
+2012,TV Shows,Avenida Brasil,Global,2
+2012,TV Shows,Here Comes Honey Boo Boo,Global,3
+2012,TV Shows,The Voice,Global,4
+2012,TV Shows,American Idol,Global,5
+2012,Videos,Gangnam Style,Global,1
+2012,Videos,Somebody That I Used to Know by Walk off the Earth,Global,2
+2012,Videos,KONY 2012,Global,3
+2012,Videos,Call Me Maybe featuring Justin Bieber,Global,4
+2012,Videos,Obama vs. Romney Epic Rap Battles of History,Global,5
+2013,Athletes,Oscar Pistorius,Global,1
+2013,Athletes,Aaron Hernandez,Global,2
+2013,Athletes,Adrian Peterson,Global,3
+2013,Athletes,Kevin Ware,Global,4
+2013,Athletes,Lance Armstrong,Global,5
+2013,Consumer Electronics,iPhone 5s,Global,1
+2013,Consumer Electronics,Samsung Galaxy S4,Global,2
+2013,Consumer Electronics,PlayStation 4,Global,3
+2013,Consumer Electronics,Xbox One,Global,4
+2013,Consumer Electronics,Nexus 5,Global,5
+2013,Events,Boston Marathon,Global,1
+2013,Events,Typhoon Haiyan,Global,2
+2013,Events,Government Shutdown,Global,3
+2013,Events,2014 FIFA World Cup,Global,4
+2013,Events,Chinese New Year,Global,5
+2013,Google+ Hashtags,#Boston,Global,1
+2013,Google+ Hashtags,#BreakingBad,Global,2
+2013,Google+ Hashtags,#TyphoonHaiyan,Global,3
+2013,Google+ Hashtags,#MileyCryus,Global,4
+2013,Google+ Hashtags,#Pope,Global,5
+2013,Movies,Man of Steel,Global,1
+2013,Movies,Iron Man 3,Global,2
+2013,Movies,World War Z,Global,3
+2013,Movies,Django Unchained,Global,4
+2013,Movies,Despicable Me 2,Global,5
+2013,People,Nelson Mandela,Global,1
+2013,People,Paul Walker,Global,2
+2013,People,Malala Yousafzai,Global,3
+2013,People,James Gandolfini,Global,4
+2013,People,Miley Cyrus,Global,5
+2013,Performing Artists,Cory Monteith,Global,1
+2013,Performing Artists,Amanda Bynes,Global,2
+2013,Performing Artists,James Gandolfini,Global,3
+2013,Performing Artists,Charlie Hunnam,Global,4
+2013,Performing Artists,Robin Thicke,Global,5
+2013,TV Shows,Under The Dome,Global,1
+2013,TV Shows,Defiance,Global,2
+2013,TV Shows,Big Brother 15,Global,3
+2013,TV Shows,Agents of S.H.I.E.L.D.,Global,4
+2013,TV Shows,Here Comes Honey Boo Boo,Global,5
+2013,Top Trending,Nelson Mandela,Global,1
+2013,Top Trending,Paul Walker,Global,2
+2013,Top Trending,iPhone 5s,Global,3
+2013,Top Trending,Cory Monteith,Global,4
+2013,Top Trending,Harlem Shake,Global,5
+2013,YouTube Videos,Ylvis - The Fox (What Does the Fox Say?),Global,1
+2013,YouTube Videos,Harlem Shake (Original Army Edition),Global,2
+2013,YouTube Videos,How Animals Eat Their Food | MisterEpicMann,Global,3
+2013,YouTube Videos,Baby&Me / The New Evian Film,Global,4
+2013,YouTube Videos,Miley Cyrus - Wrecking Ball (Chatroulette Version),Global,5
+2014,Athletes,James Rodriguez,Global,1
+2014,Athletes,Michael Schumacher,Global,2
+2014,Athletes,Ray Rice,Global,3
+2014,Athletes,Luis Suarez,Global,4
+2014,Athletes,Neymar da Silva Santos,Global,5
+2014,Consumer Electronics,iPhone 6,Global,1
+2014,Consumer Electronics,Samsung Galaxy S5,Global,2
+2014,Consumer Electronics,Nexus 6,Global,3
+2014,Consumer Electronics,Moto G,Global,4
+2014,Consumer Electronics,Samsung Note 4,Global,5
+2014,Global News,Ebola,Global,1
+2014,Global News,ISIS,Global,2
+2014,Global News,Malaysia Airlines,Global,3
+2014,Global News,Crimea / Ukraine,Global,4
+2014,Global News,Ferguson,Global,5
+2014,Google Doodles of 2014,World Cup 2014 - Watching the game while the boss is away,Global,1
+2014,Google Doodles of 2014,2014 Winter Olympics,Global,2
+2014,Google Doodles of 2014,Rubik's Cube,Global,3
+2014,Google Doodles of 2014,Philae Robotic Lander,Global,4
+2014,Google Doodles of 2014,Nelson Mandela,Global,5
+2014,Loss,Robin Williams,Global,1
+2014,Loss,Philip Seymour Hoffman,Global,2
+2014,Loss,Peaches Geldof,Global,3
+2014,Loss,Shirley Temple,Global,4
+2014,Loss,Maya Angelou,Global,5
+2014,People,Jennifer Lawrence,Global,1
+2014,People,Kim Kardashian,Global,2
+2014,People,Julie Gayet,Global,3
+2014,People,Tracy Morgan,Global,4
+2014,People,Renee Zellweger,Global,5
+2014,Searches,Robin Williams,Global,1
+2014,Searches,World Cup,Global,2
+2014,Searches,Ebola,Global,3
+2014,Searches,Malaysia Airlines,Global,4
+2014,Searches,ALS Ice Bucket Challenge,Global,5
+2014,World Cup Matches,Brazil vs Germany,Global,1
+2014,World Cup Matches,Germany vs Argentina,Global,2
+2014,World Cup Matches,Brazil vs Chile,Global,3
+2014,World Cup Matches,Argentina vs Belgium,Global,4
+2014,World Cup Matches,Brazil vs Croatia,Global,5
+2014,YouTube Videos,Mutant Giant Spider Dog (SA Wardega),Global,1
+2014,YouTube Videos,"Nike Football: Winner Stays. ft. Ronaldo, Neymar Jr., Rooney, Ibrahimović, Iniesta & more",Global,2
+2014,YouTube Videos,FIRST KISS,Global,3
+2014,YouTube Videos,The Voice IT | Serie 2 | Blind 2 | Suor Cristina Scuccia - #TEAMJ-AX,Global,4
+2014,YouTube Videos,iPhone 6 Plus Bend Test,Global,5
+2015,Consumer Tech,iPhone 6S,Global,1
+2015,Consumer Tech,Samsung Galaxy S6,Global,2
+2015,Consumer Tech,Apple Watch,Global,3
+2015,Consumer Tech,iPad Pro,Global,4
+2015,Consumer Tech,LG G4,Global,5
+2015,Global News,Charlie Hebdo,Global,1
+2015,Global News,Paris,Global,2
+2015,Global News,Hurricane Patricia,Global,3
+2015,Global News,Isis,Global,4
+2015,Global News,Nepal,Global,5
+2015,Global Sporting Events,Copa America,Global,1
+2015,Global Sporting Events,Wimbledon,Global,2
+2015,Global Sporting Events,Tour de France,Global,3
+2015,Global Sporting Events,Rugby World Cup,Global,4
+2015,Global Sporting Events,Super Bowl,Global,5
+2015,Loss,Bobbi Kristina,Global,1
+2015,Loss,Cristiano Araujo,Global,2
+2015,Loss,Christopher Lee,Global,3
+2015,Loss,Sandra Bland,Global,4
+2015,Loss,Stuart Scott,Global,5
+2015,Movies,Jurassic World,Global,1
+2015,Movies,Furious 7,Global,2
+2015,Movies,American Sniper,Global,3
+2015,Movies,Fifty Shade of Grey,Global,4
+2015,Movies,Minions,Global,5
+2015,Music Artists,Adele,Global,1
+2015,Music Artists,Sia,Global,2
+2015,Music Artists,Eagles of Death Metal,Global,3
+2015,Music Artists,Sam Smith,Global,4
+2015,Music Artists,Meghan Trainor,Global,5
+2015,People,Lamar Odom,Global,1
+2015,People,Ronda Rousey,Global,2
+2015,People,Caitlyn Jenner,Global,3
+2015,People,Adele,Global,4
+2015,People,Charlie Sheen,Global,5
+2015,Searches,Lamar Odom,Global,1
+2015,Searches,Charlie Hebdo,Global,2
+2015,Searches,Agar.io,Global,3
+2015,Searches,Jurassic World,Global,4
+2015,Searches,Paris,Global,5
+2015,TV Shows,Big Brother Brazil,Global,1
+2015,TV Shows,Jessica Jones,Global,2
+2015,TV Shows,Bigg Boss,Global,3
+2015,TV Shows,Fear the Walking Dead,Global,4
+2015,TV Shows,Better Call Saul,Global,5
+2016,Consumer Tech,iPhone 7,Global,1
+2016,Consumer Tech,Freedom 251,Global,2
+2016,Consumer Tech,iPhone SE,Global,3
+2016,Consumer Tech,iPhone 6S,Global,4
+2016,Consumer Tech,Google Pixel,Global,5
+2016,Global News,US Election,Global,1
+2016,Global News,Olympics,Global,2
+2016,Global News,Brexit,Global,3
+2016,Global News,Orlando Shooting,Global,4
+2016,Global News,Zika Virus,Global,5
+2016,Global Sporting Events,Rio Olympics,Global,1
+2016,Global Sporting Events,World Series,Global,2
+2016,Global Sporting Events,Tour de France,Global,3
+2016,Global Sporting Events,Wimbledon,Global,4
+2016,Global Sporting Events,Australian Open,Global,5
+2016,Losses,Prince,Global,1
+2016,Losses,David Bowie,Global,2
+2016,Losses,Christina Grimmie,Global,3
+2016,Losses,Alan Rickman,Global,4
+2016,Losses,Muhammad Ali,Global,5
+2016,Movies,Deadpool,Global,1
+2016,Movies,Suicide Squad,Global,2
+2016,Movies,The Revenant,Global,3
+2016,Movies,Captain America Civil War,Global,4
+2016,Movies,Batman v Superman,Global,5
+2016,Musicians,Céline Dion,Global,1
+2016,Musicians,Kesha,Global,2
+2016,Musicians,Michael Bublé,Global,3
+2016,Musicians,Creed,Global,4
+2016,Musicians,'ディーン フジオカ (Dean Fujioka),Global,5
+2016,People,Donald Trump,Global,1
+2016,People,Hillary Clinton,Global,2
+2016,People,Michael Phelps,Global,3
+2016,People,Melania Trump,Global,4
+2016,People,Simone Biles,Global,5
+2016,Searches,Pokémon Go,Global,1
+2016,Searches,iPhone 7,Global,2
+2016,Searches,Donald Trump,Global,3
+2016,Searches,Prince,Global,4
+2016,Searches,Powerball,Global,5
+2016,TV Shows,Stranger Things,Global,1
+2016,TV Shows,Westworld,Global,2
+2016,TV Shows,Luke Cage,Global,3
+2016,TV Shows,Game of Thrones,Global,4
+2016,TV Shows,Black Mirror,Global,5
+2017,Actors,Meghan Markle,Global,1
+2017,Actors,Kevin Spacey,Global,2
+2017,Actors,Gal Gadot,Global,3
+2017,Actors,Louis C.K.,Global,4
+2017,Actors,Bill Skarsgård,Global,5
+2017,Consumer Tech,iPhone 8,Global,1
+2017,Consumer Tech,iPhone X,Global,2
+2017,Consumer Tech,Nintendo Switch,Global,3
+2017,Consumer Tech,Samsung Galaxy S8,Global,4
+2017,Consumer Tech,Xbox One X,Global,5
+2017,Elections,French election,Global,1
+2017,Elections,German federal election,Global,2
+2017,Elections,UK election,Global,3
+2017,Elections,Uttar Pradesh election,Global,4
+2017,Elections,Georgia special election,Global,5
+2017,Global News,Hurricane Irma,Global,1
+2017,Global News,Bitcoin,Global,2
+2017,Global News,Las Vegas Shooting,Global,3
+2017,Global News,North Korea,Global,4
+2017,Global News,Solar Eclipse,Global,5
+2017,Global Sporting Events,Wimbledon,Global,1
+2017,Global Sporting Events,Super Bowl,Global,2
+2017,Global Sporting Events,Mayweather vs McGregor Fight,Global,3
+2017,Global Sporting Events,Tour de France,Global,4
+2017,Global Sporting Events,World Series,Global,5
+2017,How To...,How to make slime,Global,1
+2017,How To...,How to make solar eclipse glasses,Global,2
+2017,How To...,How to buy Bitcoin,Global,3
+2017,How To...,How to watch Mayweather vs McGregor,Global,4
+2017,How To...,How to make a fidget spinner,Global,5
+2017,Losses,Tom Petty,Global,1
+2017,Losses,Chester Bennington,Global,2
+2017,Losses,Chris Cornell,Global,3
+2017,Losses,Bill Paxton,Global,4
+2017,Losses,Hugh Hefner,Global,5
+2017,Memes,Cash Me Outside Meme,Global,1
+2017,Memes,United Airlines Meme,Global,2
+2017,Memes,Elf on the Shelf Meme,Global,3
+2017,Memes,What in Tarnation Meme,Global,4
+2017,Memes,Spongebob Mocking Meme,Global,5
+2017,Movies,IT,Global,1
+2017,Movies,Wonder Woman,Global,2
+2017,Movies,Beauty and the Beast,Global,3
+2017,Movies,Logan,Global,4
+2017,Movies,Justice League,Global,5
+2017,Musicians and Bands,Ariana Grande,Global,1
+2017,Musicians and Bands,Linkin Park,Global,2
+2017,Musicians and Bands,Lady Gaga,Global,3
+2017,Musicians and Bands,Mariah Carey,Global,4
+2017,Musicians and Bands,Ed Sheeran,Global,5
+2017,People,Matt Lauer,Global,1
+2017,People,Meghan Markle,Global,2
+2017,People,Nadia Toffa,Global,3
+2017,People,Harvey Weinstein,Global,4
+2017,People,Kevin Spacey,Global,5
+2017,Recipe,Chicken breast recipe,Global,1
+2017,Recipe,Ground beef recipe,Global,2
+2017,Recipe,Poğaça tarifi (Turkish bread recipe),Global,3
+2017,Recipe,French toast recipe,Global,4
+2017,Recipe,Kek tarifi (cake recipe),Global,5
+2017,Searches,Hurricane Irma,Global,1
+2017,Searches,iPhone 8,Global,2
+2017,Searches,iPhone X,Global,3
+2017,Searches,Matt Lauer,Global,4
+2017,Searches,Meghan Markle,Global,5
+2017,Songs/Lyrics,Despacito,Global,1
+2017,Songs/Lyrics,Shape of You,Global,2
+2017,Songs/Lyrics,Perfect,Global,3
+2017,Songs/Lyrics,Havana,Global,4
+2017,Songs/Lyrics,Look What You Made Me Do,Global,5
+2017,TV Shows,Stranger Things,Global,1
+2017,TV Shows,13 Reasons Why,Global,2
+2017,TV Shows,Big Brother Brasil,Global,3
+2017,TV Shows,Game of Thrones,Global,4
+2017,TV Shows,Iron Fist,Global,5
+2018,Actors,Sylvester Stallone,Global,1
+2018,Actors,Logan Paul,Global,2
+2018,Actors,Pete Davidson,Global,3
+2018,Actors,Bill Cosby,Global,4
+2018,Actors,Noah Centineo,Global,5
+2018,Athletes,Tristan Thompson,Global,1
+2018,Athletes,Alexis Sánchez,Global,2
+2018,Athletes,Lindsey Vonn,Global,3
+2018,Athletes,Shaun White,Global,4
+2018,Athletes,Khabib Nurmagomedov,Global,5
+2018,Loss,Avicii,Global,1
+2018,Loss,Mac Miller,Global,2
+2018,Loss,Stan Lee,Global,3
+2018,Loss,Anthony Bourdain,Global,4
+2018,Loss,XXXTentacion,Global,5
+2018,Movies,Black Panther,Global,1
+2018,Movies,Deadpool 2,Global,2
+2018,Movies,Venom,Global,3
+2018,Movies,Avengers: Infinity War,Global,4
+2018,Movies,Bohemian Rhapsody,Global,5
+2018,Musicians and Bands,Demi Lovato,Global,1
+2018,Musicians and Bands,Cardi B,Global,2
+2018,Musicians and Bands,Daniel Küblböck,Global,3
+2018,Musicians and Bands,Travis Scott,Global,4
+2018,Musicians and Bands,Rick Ross,Global,5
+2018,News,World Cup,Global,1
+2018,News,Hurricane Florence,Global,2
+2018,News,Mega Millions Result,Global,3
+2018,News,Royal Wedding,Global,4
+2018,News,Election Results,Global,5
+2018,People,Meghan Markle,Global,1
+2018,People,Demi Lovato,Global,2
+2018,People,Sylvester Stallone,Global,3
+2018,People,Logan Paul,Global,4
+2018,People,Khloé Kardashian,Global,5
+2018,Searches,World Cup,Global,1
+2018,Searches,Avicii,Global,2
+2018,Searches,Mac Miller,Global,3
+2018,Searches,Stan Lee,Global,4
+2018,Searches,Black Panther,Global,5
+2018,TV Shows,延禧攻略,Global,1
+2018,TV Shows,Altered Carbon,Global,2
+2018,TV Shows,บุพเพสันนิวาส,Global,3
+2018,TV Shows,मोटू पतलू,Global,4
+2018,TV Shows,Roseanne,Global,5
+2019,Actors,Jussie Smollett,Global,1
+2019,Actors,Kevin Hart,Global,2
+2019,Actors,Joaquin Phoenix,Global,3
+2019,Actors,Keanu Reeves,Global,4
+2019,Actors,Lori Loughlin,Global,5
+2019,Athletes,Antonio Brown,Global,1
+2019,Athletes,Neymar,Global,2
+2019,Athletes,Bryce Harper,Global,3
+2019,Athletes,David Ortiz,Global,4
+2019,Athletes,Alex Morgan,Global,5
+2019,Movies,Avengers: Endgame,Global,1
+2019,Movies,Joker,Global,2
+2019,Movies,Captain Marvel,Global,3
+2019,Movies,Toy Story 4,Global,4
+2019,Movies,Aquaman,Global,5
+2019,News,Copa America,Global,1
+2019,News,Notre Dame,Global,2
+2019,News,ICC Cricket World Cup,Global,3
+2019,News,Hurricane Dorian,Global,4
+2019,News,Rugby World Cup,Global,5
+2019,Passings,Cameron Boyce,Global,1
+2019,Passings,Nipsey Hussle,Global,2
+2019,Passings,Julen,Global,3
+2019,Passings,Karl Lagerfeld,Global,4
+2019,Passings,Emiliano Sala,Global,5
+2019,People,Antonio Brown,Global,1
+2019,People,Neymar,Global,2
+2019,People,James Charles,Global,3
+2019,People,Jussie Smollett,Global,4
+2019,People,Kevin Hart,Global,5
+2019,Searches,India vs South Africa,Global,1
+2019,Searches,Cameron Boyce,Global,2
+2019,Searches,Copa America,Global,3
+2019,Searches,Bangladesh vs India,Global,4
+2019,Searches,iPhone 11,Global,5
+2019,Songs,Old Town Road,Global,1
+2019,Songs,7 Rings,Global,2
+2019,Songs,Shallow,Global,3
+2019,Songs,Señorita,Global,4
+2019,Songs,Memories,Global,5
+2019,TV Shows,Game of Thrones,Global,1
+2019,TV Shows,Stranger Things,Global,2
+2019,TV Shows,Chernobyl,Global,3
+2019,TV Shows,When They See Us,Global,4
+2019,TV Shows,The Umbrella Academy,Global,5
+2020,Actors,Tom Hanks,Global,1
+2020,Actors,Joaquin Phoenix,Global,2
+2020,Actors,Amitabh Bachchan,Global,3
+2020,Actors,Ricky Gervais,Global,4
+2020,Actors,Jada Pinkett Smith,Global,5
+2020,Athletes,Ryan Newman,Global,1
+2020,Athletes,Michael Jordan,Global,2
+2020,Athletes,Tyson Fury,Global,3
+2020,Athletes,Tom Brady,Global,4
+2020,Athletes,Mike Tyson,Global,5
+2020,Concerts,Together At Home concert,Global,1
+2020,Concerts,Fire Fight Australia concert,Global,2
+2020,Concerts,Garth Brooks drive in concert,Global,3
+2020,Concerts,Travis Scott Fortnite concert,Global,4
+2020,Concerts,BTS online concert,Global,5
+2020,Games,Among Us,Global,1
+2020,Games,Fall Guys: Ultimate Knockout,Global,2
+2020,Games,Valorant,Global,3
+2020,Games,Genshin Impact,Global,4
+2020,Games,The Last of Us 2,Global,5
+2020,Loss,Kobe Bryant,Global,1
+2020,Loss,Naya Rivera,Global,2
+2020,Loss,Chadwick Boseman,Global,3
+2020,Loss,Sushant Singh Rajput,Global,4
+2020,Loss,George Floyd,Global,5
+2020,Lyrics,WAP,Global,1
+2020,Lyrics,Savage Love,Global,2
+2020,Lyrics,GOOBA,Global,3
+2020,Lyrics,Skechers,Global,4
+2020,Lyrics,Dynamite,Global,5
+2020,Movies,Parasite,Global,1
+2020,Movies,1917,Global,2
+2020,Movies,Black Panther,Global,3
+2020,Movies,365 Dni,Global,4
+2020,Movies,Contagion,Global,5
+2020,News,Coronavirus,Global,1
+2020,News,Election results,Global,2
+2020,News,Iran,Global,3
+2020,News,Beirut,Global,4
+2020,News,Hantavirus,Global,5
+2020,People,Joe Biden,Global,1
+2020,People,Kim Jong Un,Global,2
+2020,People,Boris Johnson,Global,3
+2020,People,Kamala Harris,Global,4
+2020,People,Tom Hanks,Global,5
+2020,Recipes,Dalgona coffee,Global,1
+2020,Recipes,Ekmek,Global,2
+2020,Recipes,Sourdough bread,Global,3
+2020,Recipes,Pizza,Global,4
+2020,Recipes,Lahmacun,Global,5
+2020,Searches,Coronavirus,Global,1
+2020,Searches,Election results,Global,2
+2020,Searches,Kobe Bryant,Global,3
+2020,Searches,Zoom,Global,4
+2020,Searches,IPL,Global,5
+2020,TV Shows,Tiger King,Global,1
+2020,TV Shows,Big Brother Brasil,Global,2
+2020,TV Shows,Money Heist,Global,3
+2020,TV Shows,Cobra Kai,Global,4
+2020,TV Shows,The Umbrella Academy,Global,5
