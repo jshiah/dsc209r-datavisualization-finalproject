@@ -1,18 +1,14 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 20px;
+    text-align: center;
 }
 
-header, footer {
-    text-align: center;
-    padding: 1em;
-    background-color: #f4f4f4;
+h1 {
+    margin-bottom: 20px;
 }
 
 #chart {
-    width: 600px;
-    height: 400px;
-    margin: auto;
-    border: 1px solid #ccc;
+    display: inline-block;
+    margin: 0 auto;
 }
