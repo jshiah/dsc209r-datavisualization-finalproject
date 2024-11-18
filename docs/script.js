@@ -1,8 +1,10 @@
-const margin = { top: 50, right: 20, bottom: 50, left: 100 };
+let interval; // Store the interval for animation
+let isPaused = false; // Track if the animation is paused
+const margin = { top: 50, right: 60, bottom: 200, left: 100 };
 const width = 800 - margin.left - margin.right;
 const height = 600 - margin.top - margin.bottom;
 
-// Create SVG canvas
+
 const svg = d3.select("#chart")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -10,48 +12,54 @@ const svg = d3.select("#chart")
     .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
-// Load the data
-d3.csv("/docs/global_trends.csv").then(data => {
-    // Parse data
+
+d3.csv("global_trends.csv").then(data => {
+    
     data.forEach(d => {
-        d.rank = +d.rank; // Convert rank to number
+        d.rank = +d.rank; 
     });
 
-    // Group data by year and location (Global by default)
-    const nestedData = d3.group(data.filter(d => d.location === "Global"), d => d.year);
+ 
+    const nestedData = d3.group(data, d => d.year, d => d.category);
 
-    // Define scales
+ 
     const xScale = d3.scaleBand().range([0, width]).padding(0.1);
     const yScale = d3.scaleLinear().range([height, 0]);
     const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
-    // Initialize axes
+    
     const xAxis = svg.append("g").attr("transform", `translate(0,${height})`);
     const yAxis = svg.append("g");
 
-    // Add chart title
-    svg.append("text")
+    
+    const chartTitle = svg.append("text")
         .attr("class", "title")
         .attr("x", width / 2)
         .attr("y", -20)
-        .text("Top 5 Searches by Year (Global Trends)")
         .attr("text-anchor", "middle");
 
-    // Function to update the chart for a given year
-    function updateChart(year) {
-        const yearData = Array.from(nestedData.get(year) || [])
-            .sort((a, b) => a.rank - b.rank) // Sort by rank
-            .slice(0, 5); // Take top 5
+    
+    function updateChart(year, category) {
+        const categoryData = Array.from(nestedData.get(year)?.get(category) || [])
+            .sort((a, b) => a.rank - b.rank) 
+            .slice(0, 5) 
+            .map(d => ({
+                ...d,
+                transformedRank: 6 - d.rank 
+            }));
 
-        // Update scales
-        xScale.domain(yearData.map(d => d.query));
-        yScale.domain([0, d3.max(yearData, d => d.rank)]);
+        
+        xScale.domain(categoryData.map(d => d.query));
+        yScale.domain([0, 5]);
 
-        // Join data to bars
+        
+        chartTitle.text(`Top 5 Searches (${category}) - ${year}`);
+
+        
         const bars = svg.selectAll(".bar")
-            .data(yearData, d => d.query);
+            .data(categoryData, d => d.query);
 
-        // Enter selection (new elements)
+        
         bars.enter()
             .append("rect")
             .attr("class", "bar")
@@ -59,22 +67,22 @@ d3.csv("/docs/global_trends.csv").then(data => {
             .attr("y", height)
             .attr("width", xScale.bandwidth())
             .attr("height", 0)
-            .attr("fill", d => colorScale(d.category))
+            .attr("fill", d => colorScale(category))
             .transition()
             .duration(500)
-            .attr("y", d => yScale(d.rank))
-            .attr("height", d => height - yScale(d.rank));
+            .attr("y", d => yScale(d.transformedRank))
+            .attr("height", d => height - yScale(d.transformedRank));
 
-        // Update selection (existing elements)
+        
         bars.transition()
             .duration(500)
             .attr("x", d => xScale(d.query))
-            .attr("y", d => yScale(d.rank))
+            .attr("y", d => yScale(d.transformedRank))
             .attr("width", xScale.bandwidth())
-            .attr("height", d => height - yScale(d.rank))
-            .attr("fill", d => colorScale(d.category));
+            .attr("height", d => height - yScale(d.transformedRank))
+            .attr("fill", d => colorScale(category));
 
-        // Exit selection (removing old elements)
+        
         bars.exit()
             .transition()
             .duration(500)
@@ -82,29 +90,84 @@ d3.csv("/docs/global_trends.csv").then(data => {
             .attr("height", 0)
             .remove();
 
-        // Update axes
+        
         xAxis.transition().duration(500).call(d3.axisBottom(xScale));
+        xAxis.selectAll("text")
+        .attr("transform", "rotate(-45)") 
+        .style("text-anchor", "end")     
+        .style("font-size", "12px")
+        .attr("dx", "-0.5em")            
+        .attr("dy", "0.25em");
         yAxis.transition().duration(500).call(d3.axisLeft(yScale));
     }
 
-    // Start with the first year
-    const initialYear = "2001";
-    updateChart(initialYear);
+    
+    let yearIndex = 0;
+    let categoryIndex = 0;
+    const years = Array.from(nestedData.keys()).sort(); 
+    let categories = Array.from(nestedData.get(years[yearIndex]).keys()); 
 
-    // Add a play button
-    let currentYear = 2001;
     d3.select("#play-button").on("click", () => {
-        const years = Array.from(nestedData.keys()).sort();
-        let index = years.indexOf(currentYear.toString());
-
-        const interval = setInterval(() => {
-            if (index >= years.length) {
-                clearInterval(interval);
+        if (interval) clearInterval(interval);
+        interval = setInterval(() => {
+            if (yearIndex >= years.length) {
+                clearInterval(interval); 
             } else {
-                updateChart(years[index]);
-                currentYear = years[index];
-                index++;
+                updateChart(years[yearIndex], categories[categoryIndex]);
+                categoryIndex++;
+
+                
+                if (categoryIndex >= categories.length) {
+                    categoryIndex = 0;
+                    yearIndex++;
+
+                    
+                    if (yearIndex < years.length) {
+                        categories = Array.from(nestedData.get(years[yearIndex]).keys());
+                    }
+                }
             }
-        }, 1000); // Adjust interval time as needed
+        }, 1500); 
     });
+});
+
+
+d3.select("#pause-button").on("click", () => {
+    if (interval) {
+        clearInterval(interval); 
+        interval = null;
+        isPaused = true;
+    }
+});
+
+
+d3.select("#restart-button").on("click", () => {
+    if (interval) clearInterval(interval); 
+
+    
+    yearIndex = 0;
+    categoryIndex = 0;
+    categories = Array.from(nestedData.get(years[yearIndex]).keys()); 
+
+    
+    updateChart(years[yearIndex], categories[categoryIndex]);
+
+    
+    interval = setInterval(() => {
+        if (yearIndex >= years.length) {
+            clearInterval(interval); 
+        } else {
+            updateChart(years[yearIndex], categories[categoryIndex]);
+            categoryIndex++;
+
+            
+            if (categoryIndex >= categories.length) {
+                categoryIndex = 0;
+                yearIndex++;
+                if (yearIndex < years.length) {
+                    categories = Array.from(nestedData.get(years[yearIndex]).keys());
+                }
+            }
+        }
+    }, 1500); 
 });
