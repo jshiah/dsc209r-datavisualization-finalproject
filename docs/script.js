@@ -12,6 +12,10 @@ const svg = d3.select("#chart")
     .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
+let nestedData, years, categories;
+let yearIndex = 0;
+let categoryIndex = 0;
+
 
 d3.csv("global_trends.csv").then(data => {
     
@@ -20,7 +24,9 @@ d3.csv("global_trends.csv").then(data => {
     });
 
  
-    const nestedData = d3.group(data, d => d.year, d => d.category);
+    nestedData = d3.group(data, d => d.year, d => d.category);
+    years = Array.from(nestedData.keys());
+    categories = Array.from(nestedData.get(years[yearIndex]).keys());
 
  
     const xScale = d3.scaleBand().range([0, width]).padding(0.1);
@@ -64,12 +70,8 @@ d3.csv("global_trends.csv").then(data => {
             .append("rect")
             .attr("class", "bar")
             .attr("x", d => xScale(d.query))
-            .attr("y", height)
             .attr("width", xScale.bandwidth())
-            .attr("height", 0)
             .attr("fill", d => colorScale(category))
-            .transition()
-            .duration(500)
             .attr("y", d => yScale(d.transformedRank))
             .attr("height", d => height - yScale(d.transformedRank));
 
@@ -78,34 +80,15 @@ d3.csv("global_trends.csv").then(data => {
             .duration(500)
             .attr("x", d => xScale(d.query))
             .attr("y", d => yScale(d.transformedRank))
-            .attr("width", xScale.bandwidth())
-            .attr("height", d => height - yScale(d.transformedRank))
-            .attr("fill", d => colorScale(category));
+            .attr("height", d => height - yScale(d.transformedRank));
 
         
-        bars.exit()
-            .transition()
-            .duration(500)
-            .attr("y", height)
-            .attr("height", 0)
-            .remove();
+        bars.exit().remove();
 
         
-        xAxis.transition().duration(500).call(d3.axisBottom(xScale));
-        xAxis.selectAll("text")
-        .attr("transform", "rotate(-45)") 
-        .style("text-anchor", "end")     
-        .style("font-size", "12px")
-        .attr("dx", "-0.5em")            
-        .attr("dy", "0.25em");
-        yAxis.transition().duration(500).call(d3.axisLeft(yScale));
+        xAxis.call(d3.axisBottom(xScale));
+        yAxis.call(d3.axisLeft(yScale).ticks(5));
     }
-
-    
-    let yearIndex = 0;
-    let categoryIndex = 0;
-    const years = Array.from(nestedData.keys()).sort(); 
-    let categories = Array.from(nestedData.get(years[yearIndex]).keys()); 
 
     d3.select("#play-button").on("click", () => {
         if (interval) clearInterval(interval);
