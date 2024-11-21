@@ -28,16 +28,25 @@ d3.csv("global_trends.csv").then(data => {
     years = Array.from(nestedData.keys());
     categories = Array.from(nestedData.get(years[yearIndex]).keys());
 
- 
     const xScale = d3.scaleBand().range([0, width]).padding(0.1);
     const yScale = d3.scaleLinear().range([height, 0]);
     const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
     
     const xAxis = svg.append("g").attr("transform", `translate(0,${height})`);
+
     const yAxis = svg.append("g");
 
-    
+    svg.append("text")
+    .attr("class", "y-axis-label")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -height / 2)
+    .attr("y", -margin.left + 20)
+    .attr("text-anchor", "middle")
+    .style("font-size", "14px")
+    .style("visibility", "hidden")
+    .text("Rank");
+
     const chartTitle = svg.append("text")
         .attr("class", "title")
         .attr("x", width / 2)
@@ -46,6 +55,8 @@ d3.csv("global_trends.csv").then(data => {
 
     
     function updateChart(year, category) {
+        svg.select(".y-axis-label").style("visibility", "visible");
+
         const categoryData = Array.from(nestedData.get(year)?.get(category) || [])
             .sort((a, b) => a.rank - b.rank) 
             .slice(0, 5) 
@@ -86,7 +97,16 @@ d3.csv("global_trends.csv").then(data => {
         bars.exit().remove();
 
         
-        xAxis.call(d3.axisBottom(xScale));
+        
+
+        xAxis.transition().duration(500).call(d3.axisBottom(xScale));
+        xAxis.selectAll("text")
+        .attr("transform", "rotate(-45)") 
+        .style("text-anchor", "end")     
+        .style("font-size", "12px")
+        .attr("dx", "-0.5em")            
+        .attr("dy", "0.25em");
+
         yAxis.call(d3.axisLeft(yScale).ticks(5));
     }
 
