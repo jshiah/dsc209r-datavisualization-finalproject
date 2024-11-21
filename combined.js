@@ -134,9 +134,9 @@ d3.csv("global_trends.csv").then(data => {
 
 
 
-// Chart 2
+// Chart 2: CURRENT ISSUE in some years, all bars go to 15 by default ??? 
 
-let interval2, currentYearIndex = 0; // For chart 2 controls
+let interval2, currentYearIndex = 0; 
 const margin2 = { top: 20, right: 40, bottom: 100, left: 150 };
 const width2 = 800 - margin2.left - margin2.right;
 const height2 = 600 - margin2.top - margin2.bottom;
@@ -148,15 +148,20 @@ const svg2 = d3.select("#chart2")
     .append("g")
     .attr("transform", `translate(${margin2.left},${margin2.top})`);
 
-d3.csv("global_trends.csv").then(data => {
-    console.log(data);
+d3.csv("trends.csv").then(data => {
+    console.log("Raw Data:", data);  
+
     data.forEach(d => {
         d.year = +d.year;
-        d.count = +d.count;
+        d.count = +d.rank; // aggregate based on 'rank' in place of 'count'
+    });
+
+    data.forEach(d => {
+        console.log(`Year: ${d.year}, Category: ${d.category}, Rank: ${d.rank}`);
     });
 
     const years = Array.from(new Set(data.map(d => d.year)));
-    console.log("Years:", years);
+    console.log("Years:", years); 
 
     const yScale2 = d3.scaleBand()
         .range([0, height2])
@@ -185,25 +190,25 @@ d3.csv("global_trends.csv").then(data => {
 
     function updateBars(year) {
         const yearData = data.filter(d => d.year === year);
+        console.log(`Data for Year ${year}:`, yearData); 
 
-        // aggr data to count occurrences per category for the selected year
         const aggregatedData = d3.rollup(
             yearData,
-            v => d3.sum(v, d => d.count),  // Sum counts for each category
+            v => d3.sum(v, d => d.rank), 
             d => d.category
         );
+        console.log("Aggregated Data:", aggregatedData);
 
         const aggregatedArray = Array.from(aggregatedData, ([key, value]) => ({ key, value }))
-            .sort((a, b) => b.value - a.value)
-            .slice(0, 10); // top 10 categories
+            .sort((a, b) => b.value - a.value)  // sort by rank count
+            .slice(0, 10);  // top 10 categories
+        console.log("Top 10 Aggregated Categories:", aggregatedArray);  
 
-        // update yScale to include the top categories
         yScale2.domain(aggregatedArray.map(d => d.key));
 
-        // update xScale to fit the data
-        xScale2.domain([0, d3.max(aggregatedArray, d => d.value) + 10]);
+        xScale2.domain([0, d3.max(aggregatedArray, d => d.value) + 10]);  
+        console.log("X Scale Domain:", xScale2.domain());  
 
-        // Update x and y axes
         svg2.select(".x-axis")
             .transition()
             .duration(500)
@@ -217,21 +222,23 @@ d3.csv("global_trends.csv").then(data => {
         const bars = barsGroup.selectAll(".bar")
             .data(aggregatedArray, d => d.key);
 
+        console.log("Number of Bars:", aggregatedArray.length); 
+
         bars.enter().append("rect")
             .attr("class", "bar")
             .attr("x", 0)
-            .attr("y", d => yScale2(d.key))
-            .attr("width", 0) 
-            .attr("height", yScale2.bandwidth())
-            .attr("fill", (d, i) => d3.schemeCategory10[i % 10]) 
+            .attr("y", d => yScale2(d.key))  
+            .attr("width", 0)  
+            .attr("height", yScale2.bandwidth()) 
+            .attr("fill", (d, i) => d3.schemeCategory10[i % 10])  
             .transition()
             .duration(500)
-            .attr("width", d => xScale2(d.value));
+            .attr("width", d => xScale2(d.value));  
 
         bars.transition()
             .duration(500)
-            .attr("y", d => yScale2(d.key))
-            .attr("width", d => xScale2(d.value));
+            .attr("y", d => yScale2(d.key))  
+            .attr("width", d => xScale2(d.value)); 
 
         bars.exit().remove();
 
@@ -246,16 +253,17 @@ d3.csv("global_trends.csv").then(data => {
     let intervalId2;
 
     function playAnimation2() {
-        intervalId2 = setInterval(animateChart2, 1000); 
+        intervalId2 = setInterval(animateChart2, 1500); 
     }
 
     function pauseAnimation2() {
         clearInterval(intervalId2);
     }
 
+    // Event listeners for play/pause buttons
     d3.select("#play-button2").on("click", playAnimation2);
     d3.select("#pause-button2").on("click", pauseAnimation2);
 
     updateBars(years[0]);
-    playAnimation2(); 
+    playAnimation2();  
 });
