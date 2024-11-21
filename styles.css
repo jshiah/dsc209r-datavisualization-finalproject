@@ -12,16 +12,27 @@ h1 {
     width: 800px;  /* Set width of the charts */
     height: 600px; /* Set height of the charts */
     margin-bottom: 20px;  /* Add some spacing between the charts */
-  }
-  
-  #controls {
+}
+
+#chart1-controls, #chart2-controls {
     margin-top: 20px;
     text-align: center;  /* Center the buttons */
-  }
-  
+}
+
 /* General styling for the control buttons */
 button {
     margin: 5px;
     padding: 8px 16px;
     font-size: 14px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border: none; /* Remove default border */
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: white; /* Text color */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
 }

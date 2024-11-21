@@ -134,147 +134,128 @@ d3.csv("global_trends.csv").then(data => {
 
 
 
-// Load the CSV file for chart2
-d3.csv("global_trends.csv").then(function(data) {
+// Chart 2
 
-    // Convert the 'count' and 'year' columns to numeric types
+let interval2, currentYearIndex = 0; // For chart 2 controls
+const margin2 = { top: 20, right: 40, bottom: 100, left: 150 };
+const width2 = 800 - margin2.left - margin2.right;
+const height2 = 600 - margin2.top - margin2.bottom;
+
+const svg2 = d3.select("#chart2")
+    .append("svg")
+    .attr("width", width2 + margin2.left + margin2.right)
+    .attr("height", height2 + margin2.top + margin2.bottom)
+    .append("g")
+    .attr("transform", `translate(${margin2.left},${margin2.top})`);
+
+d3.csv("global_trends.csv").then(data => {
+    console.log(data);
     data.forEach(d => {
-      d.year = +d.year;
-      d.count = +d.count;
+        d.year = +d.year;
+        d.count = +d.count;
     });
-  
-    // Group the data by category and sum the counts to get top categories
-    // Using d3.groups()
-    const categoryTrends = d3.groups(data, d => d.category)
-        .map(([key, values]) => ({
-            key,
-            value: d3.sum(values, d => d.count)
-        }));
 
-  
-    // Get top 10 categories based on total count
-    const topCategories = categoryTrends
-      .sort((a, b) => b.value - a.value)
-      .slice(0, 10)
-      .map(d => d.key);
-  
-    // Filter the data to include only the top categories
-    const filteredData = data.filter(d => topCategories.includes(d.category));
-    console.log(filteredData); // Check the filtered data to see if it's empty or misstructured
+    const years = Array.from(new Set(data.map(d => d.year)));
+    console.log("Years:", years);
 
-  
-    // Get all unique years
-    const years = Array.from(new Set(filteredData.map(d => d.year)));
-  
-    // Set up the margins, width, and height for chart2
-    const margin = { top: 20, right: 40, bottom: 100, left: 150 };
-    const width = 800 - margin.left - margin.right;
-    const height = 600 - margin.top - margin.bottom;
-  
-    // Create the SVG container for chart2
-    const svg = d3.select("#chart2")
-      .append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-      .attr("transform", `translate(${margin.left},${margin.top})`);
-  
-    // Create scales for the x and y axes for chart2
-    const xScale = d3.scaleLinear()
-      .domain([0, d3.max(filteredData, d => d.count) + 10])
-      .range([0, width]);
-  
-    const yScale = d3.scaleBand()
-      .domain(topCategories)
-      .range([0, height])
-      .padding(0.1);
-    
-    console.log(xScale.domain(), yScale.domain());
+    const yScale2 = d3.scaleBand()
+        .range([0, height2])
+        .padding(0.1);
 
-  
-    // Create the x and y axes for chart2
-    svg.append("g")
-      .attr("class", "x-axis")
-      .attr("transform", `translate(0,${height})`)
-      .call(d3.axisBottom(xScale));
-  
-    svg.append("g")
-      .attr("class", "y-axis")
-      .call(d3.axisLeft(yScale));
-  
-    // Create a group for the bars in chart2
-    const barsGroup = svg.append("g")
-      .attr("class", "bars");
-  
-    // Create a function for updating the bars for each year in chart2
+    const xScale2 = d3.scaleLinear()
+        .range([0, width2]);
+
+    svg2.append("g")
+        .attr("class", "x-axis")
+        .attr("transform", `translate(0,${height2})`);
+
+    svg2.append("g")
+        .attr("class", "y-axis");
+
+    const barsGroup = svg2.append("g")
+        .attr("class", "bars");
+
+    const yearLabel = svg2.append("text")
+        .attr("class", "year-label")
+        .attr("x", width2 - 20)
+        .attr("y", height2 - 10)
+        .style("text-anchor", "end")
+        .style("font-size", "16px")
+        .style("fill", "#333");
+
     function updateBars(year) {
-      const yearData = filteredData.filter(d => d.year === year);
-  
-      const bars = barsGroup.selectAll(".bar")
-        .data(yearData, d => d.category);
-  
-      // Enter new bars
-      bars.enter().append("rect")
-        .attr("class", "bar")
-        .attr("x", 0)
-        .attr("y", d => yScale(d.category))
-        .attr("width", 0) // Set initial width to 0 for animation
-        .attr("height", yScale.bandwidth())
-        .attr("fill", d => d3.schemeCategory10[d.category % 10])
-        .transition()
-        .duration(500)
-        .attr("width", d => xScale(d.count));
-    
-    console.log(yearData); // Log the data used for bars
+        const yearData = data.filter(d => d.year === year);
 
-  
-      // Update existing bars
-      bars.transition()
-        .duration(500)
-        .attr("x", 0)
-        .attr("y", d => yScale(d.category))
-        .attr("width", d => xScale(d.count));
-    
-  
-      // Remove bars that are no longer in the data
-      bars.exit().remove();
+        // aggr data to count occurrences per category for the selected year
+        const aggregatedData = d3.rollup(
+            yearData,
+            v => d3.sum(v, d => d.count),  // Sum counts for each category
+            d => d.category
+        );
+
+        const aggregatedArray = Array.from(aggregatedData, ([key, value]) => ({ key, value }))
+            .sort((a, b) => b.value - a.value)
+            .slice(0, 10); // top 10 categories
+
+        // update yScale to include the top categories
+        yScale2.domain(aggregatedArray.map(d => d.key));
+
+        // update xScale to fit the data
+        xScale2.domain([0, d3.max(aggregatedArray, d => d.value) + 10]);
+
+        // Update x and y axes
+        svg2.select(".x-axis")
+            .transition()
+            .duration(500)
+            .call(d3.axisBottom(xScale2));
+
+        svg2.select(".y-axis")
+            .transition()
+            .duration(500)
+            .call(d3.axisLeft(yScale2));
+
+        const bars = barsGroup.selectAll(".bar")
+            .data(aggregatedArray, d => d.key);
+
+        bars.enter().append("rect")
+            .attr("class", "bar")
+            .attr("x", 0)
+            .attr("y", d => yScale2(d.key))
+            .attr("width", 0) 
+            .attr("height", yScale2.bandwidth())
+            .attr("fill", (d, i) => d3.schemeCategory10[i % 10]) 
+            .transition()
+            .duration(500)
+            .attr("width", d => xScale2(d.value));
+
+        bars.transition()
+            .duration(500)
+            .attr("y", d => yScale2(d.key))
+            .attr("width", d => xScale2(d.value));
+
+        bars.exit().remove();
+
+        yearLabel.text(`Year: ${year}`);
     }
-  
-    // Create animation frames for the years
-    let currentYearIndex = 0;
-  
-    function animate() {
-        console.log("Animating...");
+
+    function animateChart2() {
         updateBars(years[currentYearIndex]);
         currentYearIndex = (currentYearIndex + 1) % years.length;
     }
-  
-    let intervalId;
-  
-    function playAnimation() {
-      intervalId = setInterval(animate, 1000); // Adjust the duration for animation speed
+
+    let intervalId2;
+
+    function playAnimation2() {
+        intervalId2 = setInterval(animateChart2, 1000); 
     }
-  
-    function pauseAnimation() {
-      clearInterval(intervalId);
+
+    function pauseAnimation2() {
+        clearInterval(intervalId2);
     }
-  
-    const buttons = d3.select("#chart2-controls").append("div");
 
-    buttons.append("button")
-        .text("Play")
-        .on("click", playAnimation);
+    d3.select("#play-button2").on("click", playAnimation2);
+    d3.select("#pause-button2").on("click", pauseAnimation2);
 
-    buttons.append("button")
-        .text("Pause")
-        .on("click", pauseAnimation);
-
-  
-    // Initialize with the first year
     updateBars(years[0]);
-  
-    // Start the animation automatically
-    playAnimation();
-  
-  });
-  
+    playAnimation2(); 
+});
