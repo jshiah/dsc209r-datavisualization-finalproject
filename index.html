@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Trends Visualization</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="styles.css"> <!-- Your CSS file for styling -->
+    <script src="https://d3js.org/d3.v7.min.js"></script> <!-- D3.js library -->
 </head>
 <body>
     <h1>Google Trends: Top 5 Searches Over the Years</h1>
-    <button id="play-button">Play</button>
-    <button id="pause-button">Pause</button>
-    <button id="restart-button">Restart</button>
+
     <div id="tooltip" style="
         position: relative;
         padding: 8px;
@@ -25,8 +23,28 @@
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
         Note: Taller bars represent higher-ranked searches.
     </div>
-    <div id="chart"></div>
-    <script src="script.js"></script>
+
+    <!-- Separate chart containers for Chart 1 and Chart 2 -->
+    <div id="chart1">
+        <!-- Chart 1 will be rendered here -->
+        <!-- Buttons for controlling Chart 1 placed directly under it -->
+        <div id="chart1-controls">
+            <button id="play-button1">Play Chart 1</button>
+            <button id="pause-button1">Pause Chart 1</button>
+            <button id="restart-button1">Restart Chart 1</button>
+        </div>
     </div>
+
+    <div id="chart2">
+        <!-- Chart 2 will be rendered here -->
+        <div id="chart2-controls">
+            <button id="play-button2">Play Chart 2</button>
+            <button id="pause-button2">Pause Chart 2</button>
+            <button id="restart-button2">Restart Chart 2</button>
+        </div>
+    </div>
+
+    <!-- Link to the merged JavaScript file -->
+    <script src="combined.js"></script>
 </body>
 </html>
