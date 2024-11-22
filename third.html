@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Your CSS file for styling -->
+    <script src="https://d3js.org/d3.v7.min.js"></script> <!-- D3.js library -->
+</head>
+
+<body>
+    <h1>Pie Chart of top 10 serches in certain Categories</h1>
+
+    <p>While this is still a work in progress, for our third visualization, you will be able
+        to enter a certain category from a drop down list, which will give you the top 10 searches
+        in that category over the entire time period this data has been collected from. Once you
+        click on a slice of that data, you will see what rank and what countries this person was
+        over the entire time the data has been collected. 
+    </p>
+
+    <h1>Most Popular Searches From 2001 to 2020</h1>
+
+    <svg viewBox="-50 -50 100 100" id="chart"></svg>
+
+    <style>
+        svg {
+            max-width: 20em;
+            margin-block: 2em;
+
+            /* Do not clip shapes outside the viewBox */
+            overflow: visible;
+        }
+    </style>
+
+
+
+    <script>
+        let data = [1, 2, 3]; //this will eventually be updated
+        let total = d3.sum(data);
+
+        // D3 Arc Generator
+        const arcGenerator = d3.arc()
+            .innerRadius(0) // For a full pie, inner radius = 0
+            .outerRadius(50); // Set the radius of the pie chart
+
+        // Generate the path data for a full circle
+        let angle = 0;
+        const arcData = data.map(d => {
+            const startAngle = angle;
+            const endAngle = angle + (d / total) * 2 * Math.PI;
+            angle = endAngle; // Update angle for the next slice
+            return { startAngle, endAngle };
+        });
+        const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+
+        // Append the path to the SVG
+        d3.select("#chart")
+            .selectAll("path")
+            .data(arcData)
+            .enter()
+            .append("path")
+            .attr("d", d => arcGenerator(d)) // Use arc data to generate path
+            .attr("fill", (_, i) => color(i)); 
+     </script>
+</body>
+</html>
