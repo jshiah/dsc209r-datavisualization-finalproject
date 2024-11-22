@@ -53,21 +53,16 @@ d3.csv("global_trends.csv").then(data => {
         .attr("y", -20)
         .attr("text-anchor", "middle");
 
-    
     function updateChart(year, category) {
         svg.select(".y-axis-label").style("visibility", "visible");
 
         const categoryData = Array.from(nestedData.get(year)?.get(category) || [])
             .sort((a, b) => a.rank - b.rank) 
-            .slice(0, 5) 
-            .map(d => ({
-                ...d,
-                transformedRank: 6 - d.rank 
-            }));
+            .slice(0, 5);
 
         
         xScale.domain(categoryData.map(d => d.query));
-        yScale.domain([0, 5]);
+        yScale.domain([0,5]);
 
         
         chartTitle.text(`Top 5 Searches (${category}) - ${year}`);
@@ -83,18 +78,25 @@ d3.csv("global_trends.csv").then(data => {
             .attr("x", d => xScale(d.query))
             .attr("width", xScale.bandwidth())
             .attr("fill", d => colorScale(category))
-            .attr("y", d => yScale(d.transformedRank))
-            .attr("height", d => height - yScale(d.transformedRank));
+            .attr("y", d => yScale(6 - d.rank))
+            .attr("height", d => height - yScale(6 - d.rank))
+            .transition()
+            .duration(500);
 
         
         bars.transition()
             .duration(500)
             .attr("x", d => xScale(d.query))
-            .attr("y", d => yScale(d.transformedRank))
-            .attr("height", d => height - yScale(d.transformedRank));
+            .attr("y", d => yScale(6 - d.rank))
+            .attr("height", d => height - yScale(6 - d.rank));
 
         
-        bars.exit().remove();
+        bars.exit()
+        .transition()
+        .duration(500)
+        .attr("y", height)
+        .attr("height", 0)
+        .remove();
 
         
         
@@ -107,7 +109,7 @@ d3.csv("global_trends.csv").then(data => {
         .attr("dx", "-0.5em")            
         .attr("dy", "0.25em");
 
-        yAxis.call(d3.axisLeft(yScale).ticks(5));
+        yAxis.transition().duration(500).call(d3.axisLeft(yScale));
     }
 
     d3.select("#play-button").on("click", () => {
