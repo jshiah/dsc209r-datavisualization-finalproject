@@ -8,6 +8,13 @@ h1 {
     margin-bottom: 20px;
 }
 
+h6 {
+    font-size:100%;
+    /* line-height: 1.1; */
+    /*line-height: 0.5; /* Smaller leading for headings */
+    text-wrap: balance; /* Prevent uneven lines */
+}
+
 #chart1, #chart2 {
     width: 800px;  /* Set width of the charts */
     height: 600px; /* Set height of the charts */
