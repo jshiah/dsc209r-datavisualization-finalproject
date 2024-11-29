@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Trends Visualization</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Your CSS file for styling -->
-    <script src="https://d3js.org/d3.v7.min.js"></script> <!-- D3.js library -->
-</head>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="https://d3js.org/d3.v7.min.js"></script> 
+    <a href="third.html" target="_blank">View Third Visualization:</a></p>
 <body>
     <h1>Final Project: Worldwide Google Searches, 2001 to 2020!</h1>
     <h6>Welcome to Joyce, Sneha and Laura's exploration of worldwide google search trends over 
@@ -56,6 +56,8 @@
         <div id="chart2-controls">
             <button id="play-button2">Play Chart 2</button>
             <button id="pause-button2">Pause Chart 2</button>
+            <!-- <button id="restart-button2">Restart Chart 2</button> -->
+            
         </div>
     </div>
 
@@ -68,17 +70,7 @@
 
     <!-- Link to the merged JavaScript file -->
     <script src="combined.js"></script>
+
     
-    <!-- Load JSON data dynamically (if it's in a JSON file) -->
-    <script type="text/javascript">
-        d3.json("filtered_data.json").then(function(json_data) {
-            // Now `json_data` is available, and you can pass it to your chart rendering functions
-            console.log(json_data); // Check data format
-            // You can now call the chart2 creation logic here with `json_data` passed to it
-            // Example: yourChartFunction(json_data);
-        }).catch(function(error) {
-            console.log("Error loading JSON data: ", error);
-        });
-    </script>
 </body>
 </html>

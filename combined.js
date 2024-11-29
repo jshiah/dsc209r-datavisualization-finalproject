@@ -132,138 +132,87 @@ d3.csv("global_trends.csv").then(data => {
     updateChart1(years1[yearIndex1], categories1[categoryIndex1]);
 });
 
+// Chart 2
+// Chart 2 - Visualization for Filtered Data from CSV
+d3.csv("filtered_data.csv").then(function(data) {
+    console.log(data);
 
+    // Convert the count field to a number (it might be a string after loading)
+    data.forEach(d => d.count = +d.count);
 
-// Chart 2: CURRENT ISSUE in some years, all bars go to 15 by default ??? 
+    // Set chart dimensions and margins
+    const width = 800;
+    const height = 500;
+    const margin = { top: 20, right: 30, bottom: 40, left: 150 };
 
-let interval2, currentYearIndex = 0; 
-const margin2 = { top: 20, right: 40, bottom: 100, left: 150 };
-const width2 = 800 - margin2.left - margin2.right;
-const height2 = 600 - margin2.top - margin2.bottom;
+    // Create the SVG container for the chart
+    const svg = d3.select("#chart2").append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
 
-const svg2 = d3.select("#chart2")
-    .append("svg")
-    .attr("width", width2 + margin2.left + margin2.right)
-    .attr("height", height2 + margin2.top + margin2.bottom)
-    .append("g")
-    .attr("transform", `translate(${margin2.left},${margin2.top})`);
+    // Set up the scales for x and y axes
+    const xScale = d3.scaleLinear()
+        .domain([0, d3.max(data, d => d.count)]).nice()
+        .range([0, width - margin.left - margin.right]);
 
-d3.csv("trends.csv").then(data => {
-    console.log("Raw Data:", data);  
-
-    data.forEach(d => {
-        d.year = +d.year;
-        d.count = +d.rank; // aggregate based on 'rank' in place of 'count'
-    });
-
-    data.forEach(d => {
-        console.log(`Year: ${d.year}, Category: ${d.category}, Rank: ${d.rank}`);
-    });
-
-    const years = Array.from(new Set(data.map(d => d.year)));
-    console.log("Years:", years); 
-
-    const yScale2 = d3.scaleBand()
-        .range([0, height2])
+    const yScale = d3.scaleBand()
+        .domain([...new Set(data.map(d => d.category))])  // Get unique categories from the data
+        .range([0, height - margin.top - margin.bottom])
         .padding(0.1);
 
-    const xScale2 = d3.scaleLinear()
-        .range([0, width2]);
+    // Create the axes
+    const xAxis = svg.append("g")
+        .attr("transform", `translate(0,${height - margin.top - margin.bottom})`)
+        .call(d3.axisBottom(xScale));
 
-    svg2.append("g")
-        .attr("class", "x-axis")
-        .attr("transform", `translate(0,${height2})`);
+    const yAxis = svg.append("g")
+        .call(d3.axisLeft(yScale));
 
-    svg2.append("g")
-        .attr("class", "y-axis");
+    // Create a container for the bars (initially empty)
+    const bars = svg.append("g")
+        .selectAll(".bar")
+        .data(data)
+        .enter().append("rect")
+        .attr("class", "bar")
+        .attr("y", d => yScale(d.category))
+        .attr("x", 0)
+        .attr("height", yScale.bandwidth())
+        .attr("width", 0)
+        .attr("fill", (d, i) => d3.schemeCategory10[i % 10]);
 
-    const barsGroup = svg2.append("g")
-        .attr("class", "bars");
-
-    const yearLabel = svg2.append("text")
-        .attr("class", "year-label")
-        .attr("x", width2 - 20)
-        .attr("y", height2 - 10)
-        .style("text-anchor", "end")
-        .style("font-size", "16px")
-        .style("fill", "#333");
-
+    // Create a function to update the bars for each year
     function updateBars(year) {
         const yearData = data.filter(d => d.year === year);
-        console.log(`Data for Year ${year}:`, yearData); 
 
-        const aggregatedData = d3.rollup(
-            yearData,
-            v => d3.sum(v, d => d.rank), 
-            d => d.category
-        );
-        console.log("Aggregated Data:", aggregatedData);
+        // Join data to bars
+        const barsUpdate = bars.data(yearData, d => d.category);
 
-        const aggregatedArray = Array.from(aggregatedData, ([key, value]) => ({ key, value }))
-            .sort((a, b) => b.value - a.value)  // sort by rank count
-            .slice(0, 10);  // top 10 categories
-        console.log("Top 10 Aggregated Categories:", aggregatedArray);  
-
-        yScale2.domain(aggregatedArray.map(d => d.key));
-
-        xScale2.domain([0, d3.max(aggregatedArray, d => d.value) + 10]);  
-        console.log("X Scale Domain:", xScale2.domain());  
-
-        svg2.select(".x-axis")
-            .transition()
+        barsUpdate.transition()
             .duration(500)
-            .call(d3.axisBottom(xScale2));
-
-        svg2.select(".y-axis")
-            .transition()
-            .duration(500)
-            .call(d3.axisLeft(yScale2));
-
-        const bars = barsGroup.selectAll(".bar")
-            .data(aggregatedArray, d => d.key);
-
-        console.log("Number of Bars:", aggregatedArray.length); 
-
-        bars.enter().append("rect")
-            .attr("class", "bar")
-            .attr("x", 0)
-            .attr("y", d => yScale2(d.key))  
-            .attr("width", 0)  
-            .attr("height", yScale2.bandwidth()) 
-            .attr("fill", (d, i) => d3.schemeCategory10[i % 10])  
-            .transition()
-            .duration(500)
-            .attr("width", d => xScale2(d.value));  
-
-        bars.transition()
-            .duration(500)
-            .attr("y", d => yScale2(d.key))  
-            .attr("width", d => xScale2(d.value)); 
-
-        bars.exit().remove();
-
-        yearLabel.text(`Year: ${year}`);
+            .ease(d3.easeCubicInOut)
+            .attr("width", d => xScale(d.count));
     }
 
-    function animateChart2() {
+    // Create a list of unique years from the data
+    const years = Array.from(new Set(data.map(d => d.year))).sort();
+    let currentYearIndex = 0;
+
+    // Function to animate the chart over time (bar chart race)
+    function animate() {
         updateBars(years[currentYearIndex]);
+
+        // Move to the next year, looping back to the first year when done
         currentYearIndex = (currentYearIndex + 1) % years.length;
+
+        // Update the animation every 1000ms (1 second), adjust for speed
+        setTimeout(animate, 1000);  
     }
 
-    let intervalId2;
-
-    function playAnimation2() {
-        intervalId2 = setInterval(animateChart2, 1500); 
-    }
-
-    function pauseAnimation2() {
-        clearInterval(intervalId2);
-    }
-
-    // Event listeners for play/pause buttons
-    d3.select("#play-button2").on("click", playAnimation2);
-    d3.select("#pause-button2").on("click", pauseAnimation2);
-
-    updateBars(years[0]);
-    playAnimation2();  
+    // Start the animation
+    animate();
+}).catch(function(error) {
+    console.log("Error loading CSV data:", error);
 });
+

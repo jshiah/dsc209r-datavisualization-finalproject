@@ -1,0 +1,201 @@
+year,category,count
+2001,People,0
+2001,Searches,0
+2001,Movies,5
+2001,TV Shows,5
+2001,Películas,0
+2001,Songs,0
+2001,Recipes,0
+2001,What is...?,0
+2001,How to...,0
+2001,News,0
+2002,People,0
+2002,Searches,5
+2002,Movies,5
+2002,TV Shows,5
+2002,Películas,0
+2002,Songs,0
+2002,Recipes,0
+2002,What is...?,0
+2002,How to...,0
+2002,News,0
+2003,People,0
+2003,Searches,10
+2003,Movies,0
+2003,TV Shows,0
+2003,Películas,0
+2003,Songs,0
+2003,Recipes,0
+2003,What is...?,0
+2003,How to...,0
+2003,News,0
+2004,People,0
+2004,Searches,5
+2004,Movies,0
+2004,TV Shows,5
+2004,Películas,0
+2004,Songs,0
+2004,Recipes,0
+2004,What is...?,0
+2004,How to...,0
+2004,News,0
+2005,People,0
+2005,Searches,0
+2005,Movies,0
+2005,TV Shows,0
+2005,Películas,0
+2005,Songs,0
+2005,Recipes,0
+2005,What is...?,0
+2005,How to...,0
+2005,News,0
+2006,People,0
+2006,Searches,0
+2006,Movies,0
+2006,TV Shows,0
+2006,Películas,0
+2006,Songs,0
+2006,Recipes,0
+2006,What is...?,0
+2006,How to...,5
+2006,News,0
+2007,People,0
+2007,Searches,0
+2007,Movies,0
+2007,TV Shows,0
+2007,Películas,0
+2007,Songs,0
+2007,Recipes,5
+2007,What is...?,0
+2007,How to...,0
+2007,News,0
+2008,People,0
+2008,Searches,5
+2008,Movies,0
+2008,TV Shows,5
+2008,Películas,0
+2008,Songs,0
+2008,Recipes,0
+2008,What is...?,0
+2008,How to...,0
+2008,News,0
+2009,People,0
+2009,Searches,0
+2009,Movies,0
+2009,TV Shows,0
+2009,Películas,0
+2009,Songs,0
+2009,Recipes,5
+2009,What is...?,0
+2009,How to...,0
+2009,News,0
+2010,People,10
+2010,Searches,0
+2010,Movies,0
+2010,TV Shows,5
+2010,Películas,0
+2010,Songs,0
+2010,Recipes,0
+2010,What is...?,0
+2010,How to...,0
+2010,News,5
+2011,People,195
+2011,Searches,10
+2011,Movies,10
+2011,TV Shows,0
+2011,Películas,0
+2011,Songs,0
+2011,Recipes,0
+2011,What is...?,0
+2011,How to...,0
+2011,News,10
+2012,People,205
+2012,Searches,240
+2012,Movies,35
+2012,TV Shows,70
+2012,Películas,0
+2012,Songs,110
+2012,Recipes,10
+2012,What is...?,100
+2012,How to...,90
+2012,News,5
+2013,People,55
+2013,Searches,25
+2013,Movies,15
+2013,TV Shows,25
+2013,Películas,25
+2013,Songs,10
+2013,Recipes,5
+2013,What is...?,10
+2013,How to...,10
+2013,News,0
+2014,People,55
+2014,Searches,80
+2014,Movies,40
+2014,TV Shows,30
+2014,Películas,35
+2014,Songs,10
+2014,Recipes,15
+2014,What is...?,0
+2014,How to...,10
+2014,News,5
+2015,People,55
+2015,Searches,65
+2015,Movies,35
+2015,TV Shows,35
+2015,Películas,20
+2015,Songs,10
+2015,Recipes,20
+2015,What is...?,20
+2015,How to...,15
+2015,News,5
+2016,People,40
+2016,Searches,40
+2016,Movies,40
+2016,TV Shows,25
+2016,Películas,40
+2016,Songs,15
+2016,Recipes,15
+2016,What is...?,5
+2016,How to...,15
+2016,News,15
+2017,People,40
+2017,Searches,35
+2017,Movies,35
+2017,TV Shows,30
+2017,Películas,30
+2017,Songs,15
+2017,Recipes,25
+2017,What is...?,10
+2017,How to...,5
+2017,News,35
+2018,People,35
+2018,Searches,40
+2018,Movies,50
+2018,TV Shows,25
+2018,Películas,40
+2018,Songs,15
+2018,Recipes,25
+2018,What is...?,10
+2018,How to...,5
+2018,News,25
+2019,People,40
+2019,Searches,35
+2019,Movies,30
+2019,TV Shows,20
+2019,Películas,30
+2019,Songs,25
+2019,Recipes,25
+2019,What is...?,15
+2019,How to...,5
+2019,News,30
+2020,People,30
+2020,Searches,25
+2020,Movies,30
+2020,TV Shows,20
+2020,Películas,30
+2020,Songs,5
+2020,Recipes,25
+2020,What is...?,5
+2020,How to...,10
+2020,News,15
