@@ -171,23 +171,23 @@ d3.csv("filtered_data.csv").then(function(data) {
         .call(d3.axisLeft(yScale));
 
     // x-axis Label
-svg.append("text")
-.attr("class", "x-axis-label")
-.attr("x", width / 2)  
-.attr("y", height - margin.bottom + 20)  
-.attr("text-anchor", "middle") 
-.style("font-size", "14px")
-.text("Number of Searches");  
+    svg.append("text")
+        .attr("class", "x-axis-label")
+        .attr("x", width / 2)
+        .attr("y", height - margin.bottom + 20)
+        .attr("text-anchor", "middle")
+        .style("font-size", "14px")
+        .text("Number of Searches");
 
-// y-axis Label
-svg.append("text")
-.attr("class", "y-axis-label")
-.attr("transform", "rotate(-90)")  
-.attr("x", -height / 2)  
-.attr("y", -margin.left + 20) 
-.attr("text-anchor", "middle") 
-.style("font-size", "14px")
-.text("Category"); 
+    // y-axis Label
+    svg.append("text")
+        .attr("class", "y-axis-label")
+        .attr("transform", "rotate(-90)")
+        .attr("x", -height / 2)
+        .attr("y", -margin.left + 20)
+        .attr("text-anchor", "middle")
+        .style("font-size", "14px")
+        .text("Category");
 
     // Create a container for the bars (initially empty)
     const bars = svg.append("g")
@@ -218,20 +218,44 @@ svg.append("text")
     const years = Array.from(new Set(data.map(d => d.year))).sort();
     let currentYearIndex = 0;
 
+    // Add global variables for play/pause functionality
+    let timer2;
+    let isPaused2 = false;
+
     // Function to animate the chart over time (bar chart race)
     function animate() {
+        if (isPaused2) return; // Do nothing if the animation is paused
+
         updateBars(years[currentYearIndex]);
 
         // Move to the next year, looping back to the first year when done
         currentYearIndex = (currentYearIndex + 1) % years.length;
 
         // Update the animation every 1000ms (1 second), adjust for speed
-        setTimeout(animate, 1000);  
+        timer2 = setTimeout(animate, 1000);
     }
 
-    // Start the animation
-    animate();
+    // Play button functionality
+    function playChart2() {
+        if (isPaused2) {
+            isPaused2 = false;  // Set the animation state to play
+            animate();    // Start the animation
+        }
+    }
+
+    // Pause button functionality
+    function pauseChart2() {
+        isPaused2 = true;  // Set the animation state to paused
+        clearTimeout(timer2);  // Stop the animation timer
+    }
+
+    // Attach event listeners to the buttons
+    d3.select("#play-button2").on("click", playChart2);
+    d3.select("#pause-button2").on("click", pauseChart2);
+
+    // Optionally, you could start the animation automatically on page load
+    animate(); // Uncomment this if you want the chart to start animating on load
+
 }).catch(function(error) {
     console.log("Error loading CSV data:", error);
 });
-
