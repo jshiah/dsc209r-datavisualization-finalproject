@@ -201,6 +201,16 @@ d3.csv("filtered_data.csv").then(function(data) {
         .attr("width", 0)
         .attr("fill", (d, i) => d3.schemeCategory10[i % 10]);
 
+    // Create a container for the year label (initially empty)
+    const yearLabel = svg.append("text")
+        .attr("class", "year-label")
+        .attr("x", width / 2)
+        .attr("y", margin.top - 10)  // Position it above the chart
+        .attr("text-anchor", "middle")
+        .style("font-size", "20px")
+        .style("font-weight", "bold")
+        .text("");  // Start with an empty text, will update during animation
+
     // Create a function to update the bars for each year
     function updateBars(year) {
         const yearData = data.filter(d => d.year === year);
@@ -212,6 +222,9 @@ d3.csv("filtered_data.csv").then(function(data) {
             .duration(500)
             .ease(d3.easeCubicInOut)
             .attr("width", d => xScale(d.count));
+
+        // Update the year label with the current year
+        yearLabel.text(year);
     }
 
     // Create a list of unique years from the data
