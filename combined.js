@@ -170,6 +170,25 @@ d3.csv("filtered_data.csv").then(function(data) {
     const yAxis = svg.append("g")
         .call(d3.axisLeft(yScale));
 
+    // x-axis Label
+svg.append("text")
+.attr("class", "x-axis-label")
+.attr("x", width / 2)  
+.attr("y", height - margin.bottom + 20)  
+.attr("text-anchor", "middle") 
+.style("font-size", "14px")
+.text("Number of Searches");  
+
+// y-axis Label
+svg.append("text")
+.attr("class", "y-axis-label")
+.attr("transform", "rotate(-90)")  
+.attr("x", -height / 2)  
+.attr("y", -margin.left + 20) 
+.attr("text-anchor", "middle") 
+.style("font-size", "14px")
+.text("Category"); 
+
     // Create a container for the bars (initially empty)
     const bars = svg.append("g")
         .selectAll(".bar")
