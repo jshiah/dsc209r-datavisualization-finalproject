@@ -132,37 +132,31 @@ d3.csv("global_trends.csv").then(data => {
     updateChart1(years1[yearIndex1], categories1[categoryIndex1]);
 });
 
-// Chart 2
-// Chart 2 - Visualization for Filtered Data from CSV
+// Chart 2: bar chart race 
 d3.csv("filtered_data.csv").then(function(data) {
     console.log(data);
 
-    // Convert the count field to a number (it might be a string after loading)
     data.forEach(d => d.count = +d.count);
 
-    // Set chart dimensions and margins
     const width = 800;
     const height = 500;
     const margin = { top: 20, right: 30, bottom: 40, left: 150 };
 
-    // Create the SVG container for the chart
     const svg = d3.select("#chart2").append("svg")
         .attr("width", width)
         .attr("height", height)
         .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    // Set up the scales for x and y axes
     const xScale = d3.scaleLinear()
         .domain([0, d3.max(data, d => d.count)]).nice()
         .range([0, width - margin.left - margin.right]);
 
     const yScale = d3.scaleBand()
-        .domain([...new Set(data.map(d => d.category))])  // Get unique categories from the data
+        .domain([...new Set(data.map(d => d.category))])
         .range([0, height - margin.top - margin.bottom])
         .padding(0.1);
 
-    // Create the axes
     const xAxis = svg.append("g")
         .attr("transform", `translate(0,${height - margin.top - margin.bottom})`)
         .call(d3.axisBottom(xScale));
@@ -189,7 +183,6 @@ d3.csv("filtered_data.csv").then(function(data) {
         .style("font-size", "14px")
         .text("Category");
 
-    // Create a container for the bars (initially empty)
     const bars = svg.append("g")
         .selectAll(".bar")
         .data(data)
@@ -201,21 +194,43 @@ d3.csv("filtered_data.csv").then(function(data) {
         .attr("width", 0)
         .attr("fill", (d, i) => d3.schemeCategory10[i % 10]);
 
-    // Create a container for the year label (initially empty)
     const yearLabel = svg.append("text")
         .attr("class", "year-label")
         .attr("x", width / 2)
-        .attr("y", margin.top)  // Position it above the chart
+        .attr("y", margin.top-10)  
         .attr("text-anchor", "middle")
-        .style("font-size", "50px")
+        .style("font-size", "30px")
         .style("font-weight", "bold")
-        .text("");  // Start with an empty text, will update during animation
+        .text("");  
 
-    // Create a function to update the bars for each year
+    const tooltip = d3.select("body").append("div")
+        .attr("class", "tooltip")
+        .style("position", "absolute")
+        .style("padding", "10px")
+        .style("background", "rgba(0, 0, 0, 0.7)")
+        .style("color", "white")
+        .style("border-radius", "5px")
+        .style("opacity", 0)  
+        .style("pointer-events", "none");  
+
+    bars.on("mouseover", function(event, d) {
+        tooltip.transition().duration(200).style("opacity", 1);
+        
+        tooltip.html(`Category: ${d.category}<br>Count: ${d.count}`)
+            .style("left", (event.pageX + 10) + "px")  
+            .style("top", (event.pageY + 10) + "px"); 
+    })
+    .on("mousemove", function(event) {
+        tooltip.style("left", (event.pageX + 10) + "px")
+               .style("top", (event.pageY + 10) + "px");
+    })
+    .on("mouseout", function() {
+        tooltip.transition().duration(200).style("opacity", 0);
+    });
+
     function updateBars(year) {
         const yearData = data.filter(d => d.year === year);
 
-        // Join data to bars
         const barsUpdate = bars.data(yearData, d => d.category);
 
         barsUpdate.transition()
@@ -223,51 +238,46 @@ d3.csv("filtered_data.csv").then(function(data) {
             .ease(d3.easeCubicInOut)
             .attr("width", d => xScale(d.count));
 
-        // Update the year label with the current year
         yearLabel.text(year);
     }
 
-    // Create a list of unique years from the data
     const years = Array.from(new Set(data.map(d => d.year))).sort();
     let currentYearIndex = 0;
 
-    // Add global variables for play/pause functionality
     let timer2;
     let isPaused2 = false;
 
-    // Function to animate the chart over time (bar chart race)
     function animate() {
-        if (isPaused2) return; // Do nothing if the animation is paused
+        if (isPaused2) return; 
 
         updateBars(years[currentYearIndex]);
 
-        // Move to the next year, looping back to the first year when done
+        // increment by 1 year each time, loop back to first year after 2020 (final year in dataset)
         currentYearIndex = (currentYearIndex + 1) % years.length;
 
-        // Update the animation every 1000ms (1 second), adjust for speed
-        timer2 = setTimeout(animate, 1000);
+        // animation speed: 2000ms (2 sec)
+        timer2 = setTimeout(animate, 2000);
     }
 
-    // Play button functionality
+    // Play button 
     function playChart2() {
         if (isPaused2) {
-            isPaused2 = false;  // Set the animation state to play
-            animate();    // Start the animation
+            isPaused2 = false;  
+            animate();  
         }
     }
 
-    // Pause button functionality
+    // Pause button 
     function pauseChart2() {
-        isPaused2 = true;  // Set the animation state to paused
-        clearTimeout(timer2);  // Stop the animation timer
+        isPaused2 = true; 
+        clearTimeout(timer2); 
     }
 
-    // Attach event listeners to the buttons
+    // event listeners for buttons
     d3.select("#play-button2").on("click", playChart2);
     d3.select("#pause-button2").on("click", pauseChart2);
 
-    // Optionally, you could start the animation automatically on page load
-    animate(); // Uncomment this if you want the chart to start animating on load
+    animate(); 
 
 }).catch(function(error) {
     console.log("Error loading CSV data:", error);
