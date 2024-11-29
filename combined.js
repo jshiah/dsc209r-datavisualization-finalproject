@@ -205,9 +205,9 @@ d3.csv("filtered_data.csv").then(function(data) {
     const yearLabel = svg.append("text")
         .attr("class", "year-label")
         .attr("x", width / 2)
-        .attr("y", margin.top - 10)  // Position it above the chart
+        .attr("y", margin.top)  // Position it above the chart
         .attr("text-anchor", "middle")
-        .style("font-size", "20px")
+        .style("font-size", "50px")
         .style("font-weight", "bold")
         .text("");  // Start with an empty text, will update during animation
 
