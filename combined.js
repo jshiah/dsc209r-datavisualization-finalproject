@@ -282,3 +282,65 @@ d3.csv("filtered_data.csv").then(function(data) {
 }).catch(function(error) {
     console.log("Error loading CSV data:", error);
 });
+
+//chart3
+d3.csv("people_trends.csv").then(data => {
+    function updatePieChart(category) {
+        d3.select("#chart-title").text(`6 Most Popular ${category} Searches From 2001 to 2020`);
+
+        const filteredData = data.filter(d => d.category === category);
+        const categoryCounts = d3.rollup(
+            filteredData,
+            v => v.length,
+            d => d.query
+        );
+
+        const sortedCategories = Array.from(categoryCounts, ([key, value]) => ({ query: key, count: value }))
+            .sort((a, b) => d3.descending(a.count, b.count))
+            .slice(0, 6);
+
+        const total = d3.sum(sortedCategories, d => d.count);
+        let angle = 0;
+        const arcData = sortedCategories.map(d => {
+            const startAngle = angle;
+            const endAngle = angle + (d.count / total) * 2 * Math.PI;
+            angle = endAngle;
+            return { startAngle, endAngle, query: d.query, count: d.count };
+        });
+
+        const arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
+        const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+        d3.select("#chart").selectAll("*").remove();
+        d3.select("#chart")
+            .selectAll("path")
+            .data(arcData)
+            .enter()
+            .append("path")
+            .attr("d", d => arcGenerator(d))
+            .attr("fill", (_, i) => color(i))
+            .attr("stroke", "#fff")
+            .attr("stroke-width", 0.5);
+
+        const legendContainer = d3.select(".legend-container");
+        const legend = legendContainer.selectAll(".legend").data(sortedCategories, d => d.query);
+
+        legend.enter()
+            .append("div")
+            .attr("class", "legend")
+            .merge(legend)
+            .style("color", (_, i) => color(i))
+            .text(d => `${d.query}: ${d.count}`);
+
+        legend.exit().remove();
+    }
+
+    d3.select("#category-select").on("change", function(event) {
+        const category = event.target.value;
+        updatePieChart(category);
+    });
+
+    updatePieChart("People");
+}).catch(error => {
+    console.error("Error loading pie chart data:", error);
+});

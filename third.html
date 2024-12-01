@@ -4,64 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Third Page</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Your CSS file for styling -->
-    <script src="https://d3js.org/d3.v7.min.js"></script> <!-- D3.js library -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 
 <body>
-    <h1>Pie Chart of top 10 searches in certain Categories</h1>
+    <h1>Pie Chart of Top 6 Searches in Certain Categories</h1>
 
-    <p>While this is still a work in progress, for our third visualization, you will be able
-        to enter a certain category from a drop down list, which will give you the top 10 searches
-        in that category over the entire time period this data has been collected from. Once you
-        click on a slice of that data, you will see what rank and what countries this person was
-        over the entire time the data has been collected. 
-    </p>
+    <p>For our third visualization, you can explore the top 6 searches within a chosen category over the entire dataset's time period. 
+        A query is counted for each time it was in a country's top 5 most common searches over a full year, in the 
+    given category. Each query is assigned a unique category, so one person of interest may be counted in different categories.</p>
 
-    <h1>Most Popular Searches From 2001 to 2020</h1>
+    <!-- Dropdown for selecting category -->
+
+    <label for="category-select">Select Category: </label>
+    <select id="category-select">
+        <option value="People">People</option>
+        <option value="Global Figures">Global Figures</option>
+        <option value="Athletes">Athletes</option>
+        <option value="Women">Women</option>
+        <option value="Men">Men</option>
+    </select>
+
+    <!-- Search Input for Dynamic Filtering -->
+    <!-- <label for="search-input">Search Query: </label> -->
+    <!-- <input type="text" id="search-input" placeholder="Type to filter queries..."> -->
+
+    <h1 id="chart-title">Most Popular Searches From 2001 to 2020</h1>
+
 
     <svg viewBox="-50 -50 100 100" id="chart"></svg>
+    <p>Number of times this individual was in the top 5 searches of a country over a full year</p>
+
+    <!-- Legend container -->
+    <div class="legend-container"></div>
 
     <style>
         svg {
             max-width: 20em;
             margin-block: 2em;
-
-            /* Do not clip shapes outside the viewBox */
-            overflow: visible;
+            overflow: visible; /* Do not clip shapes outside the viewBox */
+        }
+        .legend-container {
+            margin-top: 1em;
+        }
+        .legend {
+            font-size: 1em;
+            margin: 0.2em 0;
         }
     </style>
 
-
-
     <script>
-        let data = [1, 2, 3]; //this will eventually be updated
-        let total = d3.sum(data);
+        // Load the data from the CSV
+        d3.csv("people_trends.csv").then(data => {
 
-        // D3 Arc Generator
-        const arcGenerator = d3.arc()
-            .innerRadius(0) // For a full pie, inner radius = 0
-            .outerRadius(50); // Set the radius of the pie chart
+            // Function to update the pie chart based on selected category and search query
+            function updateChart(category, query) {
+                d3.select("#chart-title").text(`6 Most Popular ${category} Searches From 2001 to 2020`);
 
-        // Generate the path data for a full circle
-        let angle = 0;
-        const arcData = data.map(d => {
-            const startAngle = angle;
-            const endAngle = angle + (d / total) * 2 * Math.PI;
-            angle = endAngle; // Update angle for the next slice
-            return { startAngle, endAngle };
+                // Dynamically filter the data based on category and search query
+                const filteredData = data.filter(d => {
+                    let categoryMatch = d.category === category;
+                    let queryMatch = Object.values(d).join(' ').toLowerCase().includes(query.toLowerCase());
+                    return categoryMatch && queryMatch;
+                });
+
+                // Process the filtered data to get query counts (for the pie chart)
+                const categoryCounts = d3.rollup(
+                    filteredData,
+                    v => v.length, // Count occurrences of each query
+                    d => d.query // Group by the 'query' column (search terms)
+                );
+
+                // Convert to array format, sort for top 6 queries, and limit to top 6
+                const sortedCategories = Array.from(categoryCounts, ([key, value]) => ({ query: key, count: value }))
+                    .sort((a, b) => d3.descending(a.count, b.count))
+                    .slice(0, 6); // Get the top 6 queries
+
+                const total = d3.sum(sortedCategories, d => d.count); // Total count for pie chart proportions
+
+                // Prepare the pie chart data
+                let angle = 0;
+                const arcData = sortedCategories.map(d => {
+                    const startAngle = angle;
+                    const endAngle = angle + (d.count / total) * 2 * Math.PI;
+                    angle = endAngle;
+                    return { startAngle, endAngle, query: d.query, count: d.count };
+                });
+
+                // D3 Arc Generator
+                const arcGenerator = d3.arc()
+                    .innerRadius(0) // Full pie (inner radius = 0)
+                    .outerRadius(50); // Pie chart radius
+
+                // Color scale
+                const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+                // Clear existing chart before appending new paths
+                d3.select("#chart").selectAll("*").remove();
+
+                // Append the pie chart paths to the SVG
+                d3.select("#chart")
+                    .selectAll("path")
+                    .data(arcData)
+                    .enter()
+                    .append("path")
+                    .attr("d", d => arcGenerator(d))
+                    .attr("fill", (_, i) => color(i))
+                    .attr("stroke", "#fff")
+                    .attr("stroke-width", 0.5)
+                    .on("mouseover", (event, d) => {
+                        // Optional: Add tooltip or interaction
+                        console.log(`Query: ${d.query}, Count: ${d.count}`);
+                    });
+
+                // Update the legend (clear existing and create new labels)
+                const legendContainer = d3.select(".legend-container");
+
+                const legend = legendContainer
+                    .selectAll(".legend")
+                    .data(sortedCategories, d => d.query);
+
+                // Enter selection: Create new labels
+                legend.enter()
+                    .append("div")
+                    .attr("class", "legend")
+                    .merge(legend) // Update existing labels
+                    .style("color", (_, i) => color(i))
+                    .text(d => `${d.query}: ${d.count}`);
+
+                // Exit selection: Remove labels that are no longer needed
+                legend.exit().remove();
+            }
+
+            // Initialize with the default category and empty search query
+            const defaultCategory = "People";
+            const defaultQuery = "";
+            updateChart(defaultCategory, defaultQuery);
+
+            // Add event listener for category change
+            d3.select("#category-select").on("change", function(event) {
+                const selectedCategory = event.target.value;
+                const searchQuery = d3.select("#category-select").node().value;
+                updateChart(selectedCategory, searchQuery);
+            });
+
+            // Add event listener for search query input change
+            d3.select("#category-select").on("input", function(event) {
+                const selectedCategory = d3.select("#category-select").node().value;
+                const searchQuery = event.target.value;
+                updateChart(selectedCategory, searchQuery);
+            });
+
+        }).catch(error => {
+            console.error("Error loading the CSV:", error);
         });
-        const color = d3.scaleOrdinal(d3.schemeCategory10);
-
-
-        // Append the path to the SVG
-        d3.select("#chart")
-            .selectAll("path")
-            .data(arcData)
-            .enter()
-            .append("path")
-            .attr("d", d => arcGenerator(d)) // Use arc data to generate path
-            .attr("fill", (_, i) => color(i)); 
-     </script>
+    </script>
 </body>
 </html>
