@@ -1,5 +1,4 @@
-# dsc209r_finalproject
-UC San Diego - DSC209R Data Visualization - Final Project
+# UC San Diego - DSC209R Data Visualization - Final Project
 
 
 [Group's Presentation Video on Google Trends Visualization using D3.js](https://youtu.be/4En9KRbrMQw?feature=shared)
