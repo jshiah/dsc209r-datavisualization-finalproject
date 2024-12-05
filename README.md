@@ -1,7 +1,7 @@
 # UC San Diego - DSC209R Data Visualization - Final Project
 
 
-[Group's Presentation Video on Google Trends Visualization using D3.js](https://youtu.be/4En9KRbrMQw?feature=shared)
+[Group's Presentation Video on Google Trends Visualization using D3.js (YouTube)](https://youtu.be/4En9KRbrMQw?feature=shared)
 
 
 **Overview of Final Project**
