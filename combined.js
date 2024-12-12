@@ -149,12 +149,12 @@ d3.csv("filtered_data.csv").then(function(data) {
         .attr("transform", `translate(${margin.left},${margin.top})`);
 
 
-     // Add title to the chart
+     // title
      svg.append("text")
      .attr("x", width / 2)
      .attr("y", -margin.top / 2)  // Position title above the chart
      .attr("text-anchor", "middle")
-     .style("font-size", "24px")
+     .style("font-size", "12px")
      .style("font-weight", "bold")
      .style("fill", "#333")
      .text("Top 10 Google Search Categories per Year");
