@@ -91,20 +91,38 @@
         and NLP libraries to translate all non-English category names into English for further model fine-tuning, 
         data harmonization could not be completed on-time. Thus only English category names were accounted for in these visuals. 
         and explains why specific years may look quite sparse in terms of data on Google searches. 
-        Instead of statically laying out all 21 bar charts across the page, building an interactive and animated chart 
+
+    </p>
+
+    <p style="text-align: left;">
+        <strong>Annotations: </strong> Instead of statically laying out all 21 bar charts across the page, building an interactive and animated chart 
         with all 21 years’ worth of data displayed for 2 seconds each and allowing the user to use the Pause and Play buttons 
         to control the pace of the displays will engage the user’s attention much more. Unlike its static counterpart, 
         this practice of animated visualizations incorporate storytelling by showing how each year's trends fare and avoids repetition
-        of 21 similar visualizations.
-    </p>
-    <p style="text-align: left;">
-        With each category’s differentiation in color and tooltips that provide information on # of searches 
+        of 21 similar visualizations. With each category’s differentiation in color and tooltips that provide information on # of searches 
         and specific Category names, the audience will be able to see the story unfold over how long trends last throughout the years. 
-        With this interactive visualization, users will stay engaged due to its interactive elements and spot trends 
-        more quickly, showing how certain categories stay relative for a consistent number of years while other categories 
-        may quickly die out in terms of popularity. This makes the storytelling of the dataset much more memorable for the audience.
+
     </p>
 
+    <p style="text-align: left;">
+        <strong>Takeaway: </strong> From this visualization, one key takeaway is that contrary to expectations of news topics dominating 
+        Google searches, the "People" category (including celebrities and moguls) frequently held the 
+        #1 position as the most searched category from the early 2010s to 2020. 
+        With this interactive visual, users will stay engaged due to its interactive elements and spot the "People" category 
+        sustaining its relevancy the longest, showing its consistency in keeping up as a trending topic 
+        for a number of years. In the meantime,  other categories may quickly die out in terms of popularity. 
+        This makes the storytelling of the dataset much more memorable for the audience.
+    </p>
+
+    <p style="text-align: left;">
+        <strong>Challenge(s):</strong> The challenging feature to implement was finding the most efficient and accurate way to pre-process 
+        the dataset. D3.js may be brilliant with data visualization, but performing data aggregation and 
+        preprocessing proves to be subpar compared to Python and its libraries. 
+        The best way to go about finding the top 10 categories and its counts per year was by 
+        first preprocessing and creating a filtered CSV file from Python Pandas, 
+        then having D3.js work off from the filtered CSV in order to built the bar chart race correctly. 
+    </p>
+    
     <br>
     <br>
 
