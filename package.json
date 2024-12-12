@@ -1,0 +1,19 @@
+{
+  "name": "dsc209r_finalproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "combined.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^7.9.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

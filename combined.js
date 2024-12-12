@@ -152,9 +152,9 @@ d3.csv("filtered_data.csv").then(function(data) {
      // title
      svg.append("text")
      .attr("x", width / 2)
-     .attr("y", 0)  // Position title above the chart
+     .attr("y", -margin.top / 3)  // Position title above the chart
      .attr("text-anchor", "middle")
-     .style("font-size", "12px")
+     .style("font-size", "18px")
      .style("font-weight", "bold")
      .style("fill", "#333")
      .text("Top 10 Google Search Categories per Year");
@@ -207,10 +207,10 @@ d3.csv("filtered_data.csv").then(function(data) {
 
     const yearLabel = svg.append("text")
         .attr("class", "year-label")
-        .attr("x", width / 2)
-        .attr("y", margin.top-10)  
+        .attr("x", margin.top + 560)
+        .attr("y", margin.top + 400)  
         .attr("text-anchor", "middle")
-        .style("font-size", "30px")
+        .style("font-size", "40px")
         .style("font-weight", "bold")
         .text("");  
 
