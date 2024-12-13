@@ -295,9 +295,9 @@ d3.csv("filtered_data.csv").then(function(data) {
 });
 
 //chart3
-d3.csv("people_trends.csv").then(data => {
-    function updatePieChart(category) {
-        d3.select("#chart-title").text(`6 Most Popular ${category} Searches From 2001 to 2020`);
+d3.csv("people_new.csv").then(data => {
+    function updatePieChart(category, numDataPoints) {
+        d3.select("#chart-title").text(`${numDataPoints} Most Popular ${category} Searches From 2001 to 2020`);
 
         const filteredData = data.filter(d => d.category === category);
         const categoryCounts = d3.rollup(
@@ -308,7 +308,7 @@ d3.csv("people_trends.csv").then(data => {
 
         const sortedCategories = Array.from(categoryCounts, ([key, value]) => ({ query: key, count: value }))
             .sort((a, b) => d3.descending(a.count, b.count))
-            .slice(0, 6);
+            .slice(0, numDataPoints);
 
         const total = d3.sum(sortedCategories, d => d.count);
         let angle = 0;
@@ -346,12 +346,25 @@ d3.csv("people_trends.csv").then(data => {
         legend.exit().remove();
     }
 
+    // d3.select("#category-select").on("change", function(event) {
+    //     const category = event.target.value;
+    //     updatePieChart(category, 6);
+    // });
+
     d3.select("#category-select").on("change", function(event) {
         const category = event.target.value;
-        updatePieChart(category);
+        const numDataPoints = parseInt(d3.select("#num-select").property("value"));
+        updatePieChart(category, numDataPoints);
     });
 
-    updatePieChart("People");
+    d3.select("#num-select").on("change", function(event) {
+        const numDataPoints = parseInt(event.target.value);
+        const category = d3.select("#category-select").property("value");
+        updatePieChart(category, numDataPoints);
+    });
+
+
+    updatePieChart("People", 6);
 }).catch(error => {
     console.error("Error loading pie chart data:", error);
 });

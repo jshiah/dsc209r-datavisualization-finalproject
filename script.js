@@ -17,7 +17,7 @@ let yearIndex = 0;
 let categoryIndex = 0;
 
 
-d3.csv("global_trends.csv").then(data => {
+d3.csv("people_new.csv").then(data => {
     
     data.forEach(d => {
         d.rank = +d.rank; 

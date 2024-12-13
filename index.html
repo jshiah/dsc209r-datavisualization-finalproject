@@ -167,8 +167,8 @@
     <br>
     <br>
 
-    <h1>Pie Chart of Top 6 Searches in Certain Categories</h1>
-    <p>For our third visualization, you can explore the top 6 searches within a chosen category 
+    <h1>Pie Chart of Top Searches in Certain Categories</h1>
+    <p>For our third visualization, you can explore the top searches within a chosen category 
        over the entire dataset's time period. A query is counted for each time it was in a country's 
        top 5 most common searches over a full year in the given category.</p>
     <label for="category-select">Select Category: </label>
@@ -178,10 +178,21 @@
         <option value="Athletes">Athletes</option>
         <option value="Women">Women</option>
         <option value="Men">Men</option>
+        <option value="Loss">Deceased</option>
     </select>
+
+    <label for="num-select">Select Number of Data Points to see: </label>
+    <select id="num-select">
+        <option value="3">3</option>
+        <option value="6">6</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+    </select>
+
+
     <h1 id="chart-title">Most Popular Searches From 2001 to 2020</h1>
     <svg id="chart" viewBox="-50 -50 100 100"></svg>
-    <p>Number of times this individual was in the top 5 searches of a country over a full year</p>
+    <p>Number of times this individual was in the top searches of a country over a full year</p>
     <div class="legend-container"></div>
 
     <!-- Link to the merged JavaScript file -->
@@ -199,4 +210,20 @@
         });
     </script>
 </body>
+
+
+<p style="text-align: left;">
+    <strong>Annotations: </strong> To do
+     
+
+</p>
+
+<p style="text-align: left;">
+    <strong>Takeaway: </strong> To do
+</p>
+
+<p style="text-align: left;">
+    <strong>Challenge(s):</strong> To do
+</p>
+
 </html>
